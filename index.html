@@ -650,7 +650,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
     <div class="hero-txt">
       <p class="kicker">Full-stack developer · UI, product &amp; AI</p>
       <h1>I operate at the intersection of <span class="w-e">engineering</span>, <span class="w-c">customers</span> and <span class="w-p">product</span>.</h1>
-      <p class="lede">Passionate, curious and hands-on. Six years across telecom and retail: I talk to the people who use the tool, design it in code, ship it in React and TypeScript, and keep improving it after launch.</p>
+      <p class="lede">Passionate, curious and hands-on. 5+ years across telecom and retail: I talk to the people who use the tool, design it in code, ship it in React and TypeScript, and keep improving it after launch. I keep things simple: fewer screens, one pattern, less code.</p>
     </div>
     
   </section>
@@ -667,10 +667,10 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   <section class="tldr-card" id="tldr" hidden>
     <h2>The 30-second version</h2>
     <ul class="tldr-list">
-      <li><b>6+ years</b> shipping production web apps in telecom and retail</li>
+      <li><b>5+ years</b> shipping production web apps in telecom and retail</li>
       <li><b>25%</b> less duplicated UI code after rebuilding a Verizon ops portal on a shared MUI library</li>
       <li><b>40%</b> higher user satisfaction on a T-Mobile React dashboard</li>
-      <li><b>AI daily:</b> built a Gemini root-cause assistant and demoed it to the client</li>
+      <li><b>AI daily:</b> Claude, Copilot and Gemini; built a Gemini root-cause assistant and demoed it to the client</li>
     </ul>
     <div class="tldr-cta"><a class="btn btn-primary" href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Open resume</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/anusha15/" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn-ghost" href="#contact">Email</a></div>
   </section>
@@ -768,6 +768,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <button type="button" class="qchip">What did she design, not just build?</button>
       <button type="button" class="qchip">How does she use AI?</button>
       <button type="button" class="qchip">Has she worked with design systems?</button>
+      <button type="button" class="qchip">How does she keep things simple?</button>
     </div>
     <form class="ask-form" id="askform" autocomplete="off">
       <label for="askinput" class="sr">Your question</label>
@@ -794,7 +795,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <div><h3><i class="t-p"></i>Product &amp; UI</h3><p>User interviews · design in code · prototyping · design systems · data viz · accessibility</p></div>
       <div><h3><i class="t-e"></i>Front end</h3><p>React · TypeScript · Material UI · Redux · WebGL · HTML/CSS · Jest</p></div>
       <div><h3><i class="t-c"></i>Back end &amp; data</h3><p>Node.js · Java · Spring Boot · Python · Kafka · SQL · AWS</p></div>
-      <div><h3><i class="t-e"></i>AI</h3><p>Gemini API · GitHub Copilot · RAG · prompt design · AI code review</p></div>
+      <div><h3><i class="t-e"></i>AI</h3><p>Claude · Gemini API · GitHub Copilot · RAG · prompt design · AI code review</p></div>
     </div>
   </section>
 
@@ -868,6 +869,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   <div class="prose">
     <h2><i class="hd hd-p"></i>Design decisions</h2>
     <ul>
+      <li><b>Simpler, not more.</b> I removed duplicate screens and patterns instead of adding new ones; the result was 25% less UI code.</li>
       <li><b>Status first.</b> A colored dot and short label on every row, so problems stand out before you read.</li>
       <li><b>Summary before detail.</b> Three key numbers on top, the list below, sorted by urgency.</li>
       <li><b>Fewer steps.</b> Search and filters on the same screen as the list.</li>
@@ -907,7 +909,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <li>Best Deliverables recognition.</li>
     </ul>
     <h2><i class="hd hd-p"></i>What I learned</h2>
-    <p>Showing users a working build gets better feedback than describing it. And launch is the middle of the project: the biggest improvements came from what users told me after release.</p>
+    <p>The simplest version that solves the problem is usually the right one: it is easier to learn, easier to change and has fewer bugs. Showing users a working build gets better feedback than describing it. And launch is the middle of the project: the biggest improvements came from what users told me after release.</p>
   </div>
   <a class="next" href="#maps">Next: WebGL maps and live data →</a>
 </article>
@@ -1043,10 +1045,11 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <li><b>Say how sure it is.</b> A confidence bar sets expectations before someone acts.</li>
       <li><b>Stream, don't spin.</b> Text appears as it's written.</li>
       <li><b>Keep people in control.</b> The assistant suggests; the operator acts, and can stop it.</li>
+      <li><b>Keep it simple.</b> One clear answer with its evidence beats a wall of text.</li>
       <li><b>Fail gracefully.</b> If AI isn't available, fall back to something useful. The "Ask about my work" box on my home page works the same way.</li>
     </ul>
     <h2><i class="hd hd-e"></i>Also built</h2>
-    <p>An AI step in code review: Gemini prompts that flag code smells, vulnerabilities and standards issues before merge, which reduced defects. I use AI every day to explore ideas, prototype and review code.</p>
+    <p>An AI step in code review: Gemini prompts that flag code smells, vulnerabilities and standards issues before merge, which reduced defects. I use Claude, GitHub Copilot and Gemini every day to explore ideas, prototype and review code.</p>
     <h2><i class="hd hd-p"></i>What I learned</h2>
     <p>Stakeholders understood the idea in minutes once they could see it working. A working prototype answers questions a slide deck only raises.</p>
   </div>
@@ -1207,28 +1210,30 @@ document.getElementById('run').addEventListener('click',function(){
 
 /* ---------- Ask about my work ---------- */
 var FACTS=[
-'Anusha Anumula is a full-stack developer with 6+ years of production experience, currently Full Stack Developer at Verizon via Incedo (June 2024–present), Dallas TX.',
+'Anusha Anumula is a full-stack developer with 5+ years of production experience, currently Full Stack Developer at Verizon via Incedo (June 2024–present), Dallas TX.',
 'Her line: "I operate at the intersection of engineering, customers, and product. Passionate, curious, and hands-on."',
 'Verizon network-operations portal: she talked directly with ops users to understand their workflows and pain points, designed directly in code (prototyping flows and layouts in React), demoed working builds and iterated on feedback. She built a shared component library on Material UI with React and TypeScript and one theme for color, spacing and type. Result: 25% less duplicated UI code, fewer clicks and screens for common tasks, fewer bugs and support tickets, positive user and client feedback, Best Deliverables recognition. After launch she reworked navigation and filters, simplified dense layouts and fixed slow views.',
 'Maps: she designed and built interactive map views with WebGL-rendered markers for thousands of network sites, GeoServer-backed GIS diff maps showing added and removed coverage between data loads, and Python scripts to ingest county boundary data.',
-'AI: she designed and built a GenAI prototype with the Google Gemini API that turned a reporting dashboard into a next-best-action and root-cause-analysis assistant, and presented the working prototype directly to client stakeholders. She built Gemini-powered code review prompts that flag code smells, vulnerabilities and standards issues. She uses AI daily (GitHub Copilot, Gemini, LLM assistants) for exploring ideas, prototyping, boilerplate and review. Side projects: a RAG pipeline for natural-language questions across data sources, and a multi-source data retrieval agent.',
+'AI: she designed and built a GenAI prototype with the Google Gemini API that turned a reporting dashboard into a next-best-action and root-cause-analysis assistant, and presented the working prototype directly to client stakeholders. She built Gemini-powered code review prompts that flag code smells, vulnerabilities and standards issues. She uses AI daily (Claude, GitHub Copilot, Gemini) for exploring ideas, prototyping, boilerplate and review. Side projects: a RAG pipeline for natural-language questions across data sources, and a multi-source data retrieval agent.',
 'Data viz: reusable React components that draw Kafka topic flows in real time, and Grafana/Prometheus dashboards for lag, throughput and broker health; faster diagnosis improved system reliability 20%.',
 'T-Mobile (Java Developer, July 2023–May 2024): designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility; user satisfaction rose 40%. Also Spring Boot microservices, Kafka, JWT security, SQL tuning (20% faster queries).',
-'TracFone (Software Developer, 2019–2021): worked on retail shop flows for Straight Talk, TracFone and its other B2B and B2C brands; Spring/Java services, 30% faster SQL, 100+ unit tests, Jenkins/Docker CI/CD. University of North Texas: MS Computer Science, GPA 3.9, graduate teaching assistant.',
+'TracFone (Software Developer, July 2019–2021): worked on retail shop flows for Straight Talk, TracFone and its other B2B and B2C brands; Spring/Java services, 30% faster SQL, 100+ unit tests, Jenkins/Docker CI/CD. University of North Texas: MS Computer Science, GPA 3.9, graduate teaching assistant.',
 'Skills: TypeScript, JavaScript, React, Redux, Material UI, theming, WebGL, interactive maps, HTML, CSS, Jest, Node.js, Express, Java, Spring Boot, Python, Kafka, SQL, AWS, Docker, Git, pull requests and code review, CI/CD.',
 'TracFone shop flows: she worked on shop flows for Straight Talk, TracFone and their other B2B and B2C brands.',
+'Approach: she has a bias toward simplicity in design and code: fewer screens, one pattern everywhere, less code. On the Verizon portal she removed duplicate screens and patterns instead of adding new ones, cutting duplicated UI code by 25%.',
 'Contact: anumula.anusha@outlook.com. Based in Dallas, Texas.'
 ].join('\n');
 var FAQ=[
  {k:['system','component','library','mui','material','theme','tokens'],a:'Yes. On the Verizon portal she built a shared component library on Material UI with React and TypeScript, with one theme for color, spacing and type. That cut duplicated UI code by 25% and made every page behave the same way.',s:[['Design system','#system']]},
  {k:['design','designed','ux','ui','screens','flows','figma'],a:'On the Verizon network-operations portal she owned the UI design, not just the build. She talked directly with ops users about their workflows and pain points, designed the flows and layouts directly in code by prototyping in React, demoed working builds, and changed the design based on their feedback. Her design decisions: status first, summary before detail, fewer steps, and one navigation pattern everywhere.',s:[['Ops portal','#ops-portal']]},
- {k:['ai','llm','gemini','copilot','prompt','genai','agent','rag'],a:'Every day. She designed and built a GenAI prototype with the Gemini API that turned a reporting dashboard into an assistant that suggests the likely cause and next steps, and demoed it directly to client stakeholders. She also built Gemini-powered code review prompts, and uses AI tools to explore ideas, prototype, write boilerplate and review code.',s:[['AI assistant','#ai-assistant'],['AI rules','#ai-ux']]},
+ {k:['ai','llm','gemini','copilot','claude','prompt','genai','agent','rag'],a:'Every day. She designed and built a GenAI prototype with the Gemini API that turned a reporting dashboard into an assistant that suggests the likely cause and next steps, and demoed it directly to client stakeholders. She also built Gemini-powered code review prompts, and uses Claude, GitHub Copilot and Gemini daily to explore ideas, prototype, write boilerplate and review code.',s:[['AI assistant','#ai-assistant'],['AI rules','#ai-ux']]},
  {k:['shop','retail','tracfone','straight talk','ecommerce','checkout','brand'],a:'At TracFone she worked on shop flows for Straight Talk, TracFone and their other B2B and B2C brands, plus the Java and Spring services behind them. She improved database efficiency by 30%.',s:[['Shop flows','#shop']]},
  {k:['t-mobile','tmobile','subscription','dashboard','accessib','responsive'],a:'At T-Mobile she designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility. User satisfaction rose 40%.',s:[['Subscription dashboard','#subscriptions']]},
  {k:['result','impact','metric','strongest','number','best'],a:'25% less duplicated UI code after the portal rebuild, 40% higher user satisfaction on a T-Mobile dashboard, and 20% better reliability from faster diagnosis. She also earned Best Deliverables recognition at Verizon.',s:[['Results','#top']]},
  {k:['map','maps','webgl','gis','geo','marker'],a:'She built interactive map views with WebGL-rendered markers for thousands of network sites, and GIS diff maps that show added and removed coverage between data loads. You can try a rebuilt version on this page.',s:[['Maps demo','#maps']]},
- {k:['vue','react','typescript','stack','code','engineer','pull','git'],a:'She ships production React and TypeScript, and has 6+ years in real codebases with Git, pull requests and code review. Behind the UI she also works in Node.js, Java/Spring Boot and Python.',s:[['Ops portal','#ops-portal']]},
+ {k:['vue','react','typescript','stack','code','engineer','pull','git'],a:'She ships production React and TypeScript, and has 5+ years in real codebases with Git, pull requests and code review. Behind the UI she also works in Node.js, Java/Spring Boot and Python.',s:[['Ops portal','#ops-portal']]},
  {k:['user','users','customer','feedback','talk','research'],a:'She talked directly with ops users to understand their workflows, demoed builds to them, and iterated on feedback after launch: reworking navigation and filters, simplifying dense layouts, and fixing slow screens.',s:[['After launch','#ops-portal']]},
+ {k:['simple','simplicity','minimal','approach','philosophy','principle','clean'],a:'She keeps design and code simple: fewer screens, one pattern everywhere, less code. On the Verizon portal she removed duplicate screens and patterns instead of adding new ones, which cut duplicated UI code by 25% and made every page work the same way.',s:[['Ops portal','#ops-portal']]},
  {k:['contact','email','hire','reach'],a:'Email anumula.anusha@outlook.com. She is based in Dallas, Texas.',s:[['Contact','#contact']]}
 ];
 function localAnswer(q){var w=q.toLowerCase(),best=null,bs=0;FAQ.forEach(function(f){var sc=0;f.k.forEach(function(k){if(w.indexOf(k)>=0)sc++;});if(sc>bs){bs=sc;best=f;}});
