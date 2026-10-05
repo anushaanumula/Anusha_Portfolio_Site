@@ -21,12 +21,12 @@ FILES
 
 3) TURN ON REAL AI FOR THE ASK BOX (optional)
   Without this step the Ask box still works: it uses instant answers written into the page.
-  With it, questions are answered by Claude using only the facts about Anusha's work.
-  1. Get an API key at console.anthropic.com (add a small amount of credit;
+  With it, questions are answered by an AI model using only the facts about Anusha's work.
+  1. Get an API key from Anthropic at console.anthropic.com (add a small amount of credit;
      each question costs a fraction of a cent).
   2. Vercel > your project > Settings > Environment Variables:
        Name: ANTHROPIC_API_KEY   Value: (your key)
-     Optional: ANTHROPIC_MODEL to choose a model (see docs.claude.com for names).
+     Optional: ANTHROPIC_MODEL to choose a model (see your API provider's docs for model names).
   3. Deployments > Redeploy.
   The badge in the Ask box changes to "Answered by AI" once it works.
   The key stays on Vercel's server; visitors never see it.

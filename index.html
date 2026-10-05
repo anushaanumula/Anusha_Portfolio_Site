@@ -4,8 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Anusha Anumula</title>
+<link rel="canonical" href="https://anushabuilds.vercel.app/">
+<meta property="og:title" content="Anusha Anumula · Full-stack developer · UI, product & AI">
+<meta property="og:url" content="https://anushabuilds.vercel.app/">
+<meta property="og:type" content="website">
 <meta name="description" content="Anusha Anumula: full-stack developer focused on UI, product and AI. Case studies from Verizon, T-Mobile and TracFone.">
-<style>:root{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* ===== size pass: calmer type ===== */
+.hero h1{font-size:clamp(1.75rem,3.5vw,2.6rem)!important;line-height:1.18!important;max-width:24ch!important;letter-spacing:-.02em!important}
+.hero .lede{font-size:1rem!important}
+.cs-head h1{font-size:clamp(1.45rem,2.9vw,2.05rem)!important;line-height:1.2!important}
+.wcard.feature .wtitle{font-size:clamp(1.25rem,2.3vw,1.65rem)!important}
+.wtitle{font-size:clamp(1.05rem,1.8vw,1.25rem)!important}
+.big-cta{font-size:clamp(1.4rem,2.8vw,2rem)!important}
+.prose .intro{font-size:1.08rem!important}
+.prose h2{font-size:1.05rem!important}
+.ask-title{font-size:1.15rem!important}
+.tldr-card h2{font-size:1.05rem!important}
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -778,7 +794,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <div><h3><i class="t-p"></i>Product &amp; UI</h3><p>User interviews · design in code · prototyping · design systems · data viz · accessibility</p></div>
       <div><h3><i class="t-e"></i>Front end</h3><p>React · TypeScript · Material UI · Redux · WebGL · HTML/CSS · Jest</p></div>
       <div><h3><i class="t-c"></i>Back end &amp; data</h3><p>Node.js · Java · Spring Boot · Python · Kafka · SQL · AWS</p></div>
-      <div><h3><i class="t-e"></i>AI</h3><p>Claude · Gemini API · GitHub Copilot · RAG · prompt design · AI code review</p></div>
+      <div><h3><i class="t-e"></i>AI</h3><p>Gemini API · GitHub Copilot · RAG · prompt design · AI code review</p></div>
     </div>
   </section>
 
@@ -792,7 +808,7 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <li><a href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener"><b>Resume</b><span>PDF ↗</span></a></li>
       <li data-link="linkedin" hidden><a target="_blank" rel="noopener"><b>LinkedIn</b><span>↗</span></a></li>
       <li data-link="github" hidden><a target="_blank" rel="noopener"><b>GitHub</b><span>↗</span></a></li>
-      <li><a href="#" id="dlresume" hidden><b>Download resume</b><span>↓</span></a></li>
+      <li hidden><a href="Anusha_Anumula_Resume.pdf" id="dlresume" hidden><b>Download resume</b><span>↓</span></a></li>
     </ul>
     <p class="note">Based in Dallas, Texas.</p>
   </section>
@@ -1155,7 +1171,7 @@ document.getElementById('copy').addEventListener('click',function(){
 });
 
 /* ---------- AI: shared ---------- */
-var samplePromise=(window.claude&&window.claude.use)?window.claude.use('sample').catch(function(){return null}):Promise.resolve(null);
+var samplePromise=Promise.resolve(null);
 var aiOK=true; // flips false after not_granted etc.
 var HIDE_CODES=['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed','session_expired'];
 function typeOut(el,str,done,signal){ if(reduce){el.textContent=str;return done&&done();} var n=0,car=document.createElement('span');car.className='caret';
@@ -1164,7 +1180,7 @@ function typeOut(el,str,done,signal){ if(reduce){el.textContent=str;return done&
 /* ---------- AI root-cause assistant ---------- */
 var INCIDENT='Incident data (sample):\n- Alert: consumer lag on topic orders.events rose from 1,200 to 48,000 messages in 9 minutes, starting 10:33.\n- Grafana: consumer group billing-sync instances went from 4 to 2 at 10:31. Other consumer groups normal.\n- Deploy log: release 3.14.2 of billing-sync deployed 10:30.\n- Broker health: all 3 brokers healthy, disk 41%, no under-replicated partitions.\n';
 var running=false,runModeEl=document.getElementById('runmode');
-samplePromise.then(function(s){ if(s){runModeEl.textContent='Live AI (Claude)';} });
+samplePromise.then(function(s){ if(s){runModeEl.textContent='Live AI';} });
 function scriptedRun(){
   var cause=document.getElementById('cause'),steps=document.getElementById('steps'),th=document.getElementById('thinking'),bar=document.getElementById('confbar'),num=document.getElementById('confnum');
   var c='Likely cause: a consumer group lost two instances after a deploy';
@@ -1178,11 +1194,11 @@ document.getElementById('run').addEventListener('click',function(){
   samplePromise.then(function(sample){
     if(!sample||!aiOK){runModeEl.textContent='Replay';return scriptedRun();}
     var cause=document.getElementById('cause'),steps=document.getElementById('steps'),th=document.getElementById('thinking'),bar=document.getElementById('confbar'),num=document.getElementById('confnum');
-    th.textContent='Claude is reading 3 sources…';cause.textContent='';steps.innerHTML='';bar.style.width='0%';num.textContent='…';
+    th.textContent='Reading 3 sources…';cause.textContent='';steps.innerHTML='';bar.style.width='0%';num.textContent='…';
     sample.json('You are an operations assistant inside a network-operations dashboard. Using ONLY the incident data below, find the most likely root cause and suggest next steps for the operator. Reply with only JSON: {"cause": "Likely cause: <one short sentence>", "steps": ["<short imperative step>", "<step>", "<step>"], "confidence": <integer 0-100>}.\n\n'+INCIDENT,{modelTier:'quick',cache:{gcTime:300000}})
       .then(function(r){
         var c=String(r&&r.cause||'Likely cause: unclear from the data'),st=Array.isArray(r&&r.steps)?r.steps.slice(0,4).map(String):[],cf=Math.max(0,Math.min(100,parseInt(r&&r.confidence,10)||0));
-        th.textContent='Answered live by Claude · checked 3 sources';
+        th.textContent='Answered live by AI · checked 3 sources';
         typeOut(cause,c,function(){var k=0;(function next(){if(k<st.length){var li=document.createElement('li');steps.appendChild(li);typeOut(li,st[k++],next);}else{bar.style.width=cf+'%';num.textContent=cf+'%';running=false;}})();});
       })
       .catch(function(e){ if(e&&HIDE_CODES.indexOf(e.code)>=0){aiOK=false;runModeEl.textContent='Replay';} running=true; scriptedRun(); });
@@ -1195,7 +1211,7 @@ var FACTS=[
 'Her line: "I operate at the intersection of engineering, customers, and product. Passionate, curious, and hands-on."',
 'Verizon network-operations portal: she talked directly with ops users to understand their workflows and pain points, designed directly in code (prototyping flows and layouts in React), demoed working builds and iterated on feedback. She built a shared component library on Material UI with React and TypeScript and one theme for color, spacing and type. Result: 25% less duplicated UI code, fewer clicks and screens for common tasks, fewer bugs and support tickets, positive user and client feedback, Best Deliverables recognition. After launch she reworked navigation and filters, simplified dense layouts and fixed slow views.',
 'Maps: she designed and built interactive map views with WebGL-rendered markers for thousands of network sites, GeoServer-backed GIS diff maps showing added and removed coverage between data loads, and Python scripts to ingest county boundary data.',
-'AI: she designed and built a GenAI prototype with the Google Gemini API that turned a reporting dashboard into a next-best-action and root-cause-analysis assistant, and presented the working prototype directly to client stakeholders. She built Gemini-powered code review prompts that flag code smells, vulnerabilities and standards issues. She uses AI daily (Claude, GitHub Copilot, Gemini) for exploring ideas, prototyping, boilerplate and review. Side projects: a RAG pipeline for natural-language questions across data sources, and a multi-source data retrieval agent.',
+'AI: she designed and built a GenAI prototype with the Google Gemini API that turned a reporting dashboard into a next-best-action and root-cause-analysis assistant, and presented the working prototype directly to client stakeholders. She built Gemini-powered code review prompts that flag code smells, vulnerabilities and standards issues. She uses AI daily (GitHub Copilot, Gemini, LLM assistants) for exploring ideas, prototyping, boilerplate and review. Side projects: a RAG pipeline for natural-language questions across data sources, and a multi-source data retrieval agent.',
 'Data viz: reusable React components that draw Kafka topic flows in real time, and Grafana/Prometheus dashboards for lag, throughput and broker health; faster diagnosis improved system reliability 20%.',
 'T-Mobile (Java Developer, July 2023–May 2024): designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility; user satisfaction rose 40%. Also Spring Boot microservices, Kafka, JWT security, SQL tuning (20% faster queries).',
 'TracFone (Software Developer, 2019–2021): worked on retail shop flows for Straight Talk, TracFone and its other B2B and B2C brands; Spring/Java services, 30% faster SQL, 100+ unit tests, Jenkins/Docker CI/CD. University of North Texas: MS Computer Science, GPA 3.9, graduate teaching assistant.',
@@ -1219,8 +1235,8 @@ function localAnswer(q){var w=q.toLowerCase(),best=null,bs=0;FAQ.forEach(functio
   return best||{a:'I don\'t have that on this page. The case studies below cover her design work, maps, AI work and design system. For anything else, email anumula.anusha@outlook.com.',s:[['Contact','#contact']]};}
 var askForm=document.getElementById('askform'),askIn=document.getElementById('askinput'),askOut=document.getElementById('askout'),askQ=document.getElementById('askq'),askA=document.getElementById('aska'),askSrc=document.getElementById('asksrc'),askStop=document.getElementById('askstop'),askBtn=document.getElementById('askbtn'),askMode=document.getElementById('askmode');
 var ctl=null,history=[],serverAI=null;
-samplePromise.then(function(s){ if(s){askMode.innerHTML='<i class="dot" style="background:var(--accent)"></i><span>Answered by Claude</span>';} });
-function srcHTML(list,ai){return (ai?'Answered by Claude from this page':'Instant answer')+(list&&list.length?' · See: '+list.map(function(x){return '<a href="'+x[1]+'">'+x[0]+'</a>'}).join(', '):'');}
+samplePromise.then(function(s){ if(s){askMode.innerHTML='<i class="dot" style="background:var(--accent)"></i><span>Answered by AI</span>';} });
+function srcHTML(list,ai){return (ai?'Answered by AI from this page':'Instant answer')+(list&&list.length?' · See: '+list.map(function(x){return '<a href="'+x[1]+'">'+x[0]+'</a>'}).join(', '):'');}
 function setBusy(b){askBtn.disabled=b;askStop.hidden=!b;}
 function ask(q){
   q=q.trim();if(!q)return;askOut.hidden=false;askQ.textContent=q;askSrc.textContent='';
@@ -1442,10 +1458,6 @@ if(reduce){draw(0);}else requestAnimationFrame(loop);
 /* ---------- profile links + resume download ---------- */
 var LINKS={linkedin:'https://www.linkedin.com/in/anusha15/',github:''};
 document.querySelectorAll('[data-link]').forEach(function(li){var u=LINKS[li.dataset.link];if(u){li.querySelector('a').href=u;li.hidden=false;}});
-(window.claude&&window.claude.use?window.claude.use('downloads').catch(function(){return null}):Promise.resolve(null)).then(function(dl){
-  var a=document.getElementById('dlresume');if(!dl||!a)return;a.hidden=false;
-  a.addEventListener('click',function(e){e.preventDefault();fetch('Anusha_Anumula_Resume.pdf').then(function(r){return r.blob()}).then(function(b){return dl.save({filename:'Anusha_Anumula_Resume.pdf',data:b});}).catch(function(){window.open('Anusha_Anumula_Resume.pdf','_blank');});});
-});
 
 /* ---------- reading lens ---------- */
 (function(){
