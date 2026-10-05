@@ -1,6 +1,6 @@
 // Vercel serverless function: answers questions about Anusha's work.
 // Needs one environment variable in Vercel: ANTHROPIC_API_KEY
-// Optional: ANTHROPIC_MODEL (defaults below; check docs.claude.com for current model names)
+// Optional: ANTHROPIC_MODEL (defaults below; see the provider docs for current model names)
 
 const FACTS = [
 'Anusha Anumula is a full-stack developer with 6+ years of production experience, currently Full Stack Developer at Verizon via Incedo (June 2024–present), Dallas TX.',
