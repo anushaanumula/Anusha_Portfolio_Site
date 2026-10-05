@@ -1218,7 +1218,7 @@ var FAQ=[
 function localAnswer(q){var w=q.toLowerCase(),best=null,bs=0;FAQ.forEach(function(f){var sc=0;f.k.forEach(function(k){if(w.indexOf(k)>=0)sc++;});if(sc>bs){bs=sc;best=f;}});
   return best||{a:'I don\'t have that on this page. The case studies below cover her design work, maps, AI work and design system. For anything else, email anumula.anusha@outlook.com.',s:[['Contact','#contact']]};}
 var askForm=document.getElementById('askform'),askIn=document.getElementById('askinput'),askOut=document.getElementById('askout'),askQ=document.getElementById('askq'),askA=document.getElementById('aska'),askSrc=document.getElementById('asksrc'),askStop=document.getElementById('askstop'),askBtn=document.getElementById('askbtn'),askMode=document.getElementById('askmode');
-var ctl=null,history=[];
+var ctl=null,history=[],serverAI=null;
 samplePromise.then(function(s){ if(s){askMode.innerHTML='<i class="dot" style="background:var(--accent)"></i><span>Answered by Claude</span>';} });
 function srcHTML(list,ai){return (ai?'Answered by Claude from this page':'Instant answer')+(list&&list.length?' · See: '+list.map(function(x){return '<a href="'+x[1]+'">'+x[0]+'</a>'}).join(', '):'');}
 function setBusy(b){askBtn.disabled=b;askStop.hidden=!b;}
@@ -1227,7 +1227,16 @@ function ask(q){
   document.querySelectorAll('.fb').forEach(function(b){b.setAttribute('aria-pressed','false')});
   var loc=localAnswer(q);
   samplePromise.then(function(sample){
-    if(!sample||!aiOK){ askA.className='ask-a';typeOut(askA,loc.a,function(){askSrc.innerHTML=srcHTML(loc.s,false);}); return; }
+    if(!sample||!aiOK){
+      if(serverAI===false){ askA.className='ask-a';typeOut(askA,loc.a,function(){askSrc.innerHTML=srcHTML(loc.s,false);}); return; }
+      setBusy(true);askA.className='ask-a thinking';askA.textContent='Thinking…';
+      fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,history:history.slice(-4)})})
+        .then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
+        .then(function(d){if(!d||!d.answer)throw new Error('empty');serverAI=true;askMode.innerHTML='<i class="dot" style="background:var(--accent)"></i><span>Answered by AI</span>';
+          history.push({role:'user',content:q},{role:'assistant',content:d.answer});askA.className='ask-a';typeOut(askA,d.answer,function(){askSrc.innerHTML='Answered by AI from this page'+(loc.s&&loc.s.length?' · See: '+loc.s.map(function(x){return '<a href="'+x[1]+'">'+x[0]+'</a>'}).join(', '):'');});})
+        .catch(function(){serverAI=false;askA.className='ask-a';typeOut(askA,loc.a,function(){askSrc.innerHTML=srcHTML(loc.s,false);});})
+        .then(function(){setBusy(false);});
+      return; }
     if(ctl)ctl.abort(); ctl=new AbortController(); setBusy(true);
     askA.className='ask-a thinking';askA.textContent='Thinking…';
     var rules='You are a helpful guide on Anusha Anumula\'s portfolio, answering a recruiter or hiring manager. Answer ONLY from the facts below; never invent employers, numbers, tools or projects. If the facts do not cover the question, say so in one sentence and suggest emailing her. Refer to her as "Anusha" or "she". Plain text, no markdown, 2-4 short sentences, warm and specific.\n\nFACTS:\n'+FACTS;
