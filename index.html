@@ -724,13 +724,16 @@ body{padding-bottom:72px}
   .hero .lede{max-width:none!important;margin:0;padding-bottom:6px}
 }
 @media (max-width:480px){.theme-btn{display:none!important}.hero{padding-block:24px 20px!important}}
+/* Section dots carried lens colors; without the lens they meant nothing, so they go */
+.prose h2 .hd,.skillgroups h3 i{display:none}
+#askmode{display:none}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="top">
   <a class="name" href="#home">Anusha Anumula</a>
-  <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#design">Design</a><a href="#contact">Contact</a><a class="nav-resume" href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><button type="button" class="theme-btn" id="themebtn" aria-label="Switch color theme">Theme: auto</button></nav>
+  <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-resume" href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><button type="button" class="theme-btn" id="themebtn" aria-label="Switch color theme">Theme: auto</button></nav>
 </header>
 
 <!-- ================= HOME ================= -->
@@ -746,7 +749,7 @@ body{padding-bottom:72px}
   </section>
 
   <section id="work" class="home-sec">
-    <div class="sec-row"><h2 class="sec-title">Selected work</h2><span class="sec-note">4 projects · 2024 – now</span></div>
+    <div class="sec-row"><h2 class="sec-title">Selected work</h2><span class="sec-note">National wireless carrier, via Incedo · 2024 – now</span></div>
     <div class="wgrid">
 
       <a class="wcard feature" href="#ops-portal">
@@ -762,7 +765,6 @@ body{padding-bottom:72px}
           </div>
         </div>
         <div class="wmeta">
-          <span class="wco">Enterprise UX · data-dense UI · 2024 – now</span>
           <b class="wtitle">Network performance platform redesign</b>
           <span class="sub" data-all="Learned how RF and performance engineers troubleshoot, then redesigned the platform around that path on one shared component library." data-designer="Status-first layout, summary before detail, one pattern on every page." data-engineer="React · TypeScript · MUI theme · Node.js APIs">Learned how RF and performance engineers troubleshoot, then redesigned the platform around that path on one shared component library.</span>
           <span class="wfoot"><span class="wkpi">25% less duplicated UI code</span><span class="rt">4 min read →</span></span>
@@ -772,7 +774,6 @@ body{padding-bottom:72px}
       <a class="wcard" href="#maps">
         <div class="wvis v-map" aria-hidden="true"><svg viewBox="0 0 200 150" class="txmini" id="txmini"></svg></div>
         <div class="wmeta">
-          <span class="wco">Geospatial · data visualization · 2024 – now</span>
           <b class="wtitle">Map-based KPI analysis</b>
           <span class="sub" data-all="Engineers draw an area on a nationwide map and get KPI trends and site lists in seconds, instead of rebuilding spreadsheets by hand." data-designer="Color only means state; what changed is a mode, not another screen." data-engineer="WebGL · GeoJSON/KML · GeoServer · Python · Airflow">Engineers draw an area on a nationwide map and get KPI trends and site lists in seconds, instead of rebuilding spreadsheets by hand.</span>
           <span class="wfoot"><span class="wkpi">~50% less troubleshooting time</span><span class="rt">4 min read →</span></span>
@@ -789,30 +790,13 @@ body{padding-bottom:72px}
           </div>
         </div>
         <div class="wmeta">
-          <span class="wco">AI · human in the loop · 2024 – now</span>
           <b class="wtitle">AI assistant for network triage</b>
           <span class="sub" data-all="A generative AI assistant that reads a site's KPIs, alarms and open tickets, then suggests the likely cause, next steps and which ticket to work first." data-designer="Evidence and confidence beside every answer; engineers stay in control." data-engineer="Gemini API · prompt design · React · streaming UI">A generative AI assistant that reads a site's KPIs, alarms and open tickets, then suggests the likely cause, next steps and which ticket to work first.</span>
           <span class="wfoot"><span class="wkpi">Piloted with engineers</span><span class="rt">4 min read →</span></span>
         </div>
       </a>
 
-      <a class="wcard feature" href="#tv-concept">
-        <div class="wvis v-tv" aria-hidden="true">
-          <div class="tv-mini">
-            <svg viewBox="0 0 160 90" preserveAspectRatio="none"><g fill="none" stroke="hsl(178 90% 66%)" stroke-width="1.4"><path d="M0 40 Q40 32 80 40 T160 40" opacity=".3"/><path d="M0 49 Q40 41 80 49 T160 49" opacity=".45"/><path d="M0 58 Q40 50 80 58 T160 58" opacity=".6"/></g><path d="M0 60 L36 38 L58 52 L86 26 L120 54 L160 36 V90 H0Z" fill="#000" opacity=".22"/></svg>
-            <div class="tm-low"><span class="tm-chip">Calm Planet</span><b>Coastal Cliffs</b></div>
-            <div class="tm-cap">Puffins nest in the rock ledges.</div>
-          </div>
-        </div>
-        <div class="wmeta">
-          <span class="wco">Self-initiated concept · 2026</span>
-          <b class="wtitle">Designing for distance: a venue display and its owner app</b>
-          <span class="sub" data-all="A shared screen people glance at from a distance and control with a remote, plus the web app owners use to keep every screen running." data-designer="Big type, safe areas, unmistakable focus; problems first in the owner app." data-engineer="Vue 3 · TypeScript · Vite · remote focus navigation">A shared screen people glance at from a distance and control with a remote, plus the web app owners use to keep every screen running.</span>
-          <span class="wfoot"><span class="wkpi">Live demo · Vue + TypeScript</span><span class="rt">4 min read →</span></span>
-        </div>
-      </a>
-
-    </div>
+      </div>
   </section>
 
 
@@ -856,49 +840,6 @@ body{padding-bottom:72px}
     </div>
   </section>
 
-  <section id="design" class="home-sec" aria-labelledby="design-title">
-    <div class="sec-row"><h2 class="sec-title" id="design-title">How this site is designed</h2></div>
-    <div class="dn-grid">
-      <div class="dn">
-        <h3>Type scale</h3>
-        <p class="dn-lead">Eight sizes, each with one job.</p>
-        <ul class="dn-type">
-          <li><span style="font-size:var(--t-2xl)">Aa</span><small>40 · hero</small></li>
-          <li><span style="font-size:var(--t-xl)">Aa</span><small>32 · page title</small></li>
-          <li><span style="font-size:var(--t-lg)">Aa</span><small>26 · feature</small></li>
-          <li><span style="font-size:var(--t-md)">Aa</span><small>20 · section</small></li>
-          <li><span style="font-size:var(--t-lead)">Aa</span><small>18 · intro</small></li>
-          <li><span style="font-size:var(--t-base)">Aa</span><small>16 · body</small></li>
-          <li><span style="font-size:var(--t-sm)">Aa</span><small>14 · controls</small></li>
-          <li><span style="font-size:var(--t-xs)">Aa</span><small>12 · labels</small></li>
-        </ul>
-      </div>
-      <div class="dn">
-        <h3>Color meaning</h3>
-        <p class="dn-lead">Every color means one thing.</p>
-        <ul class="dn-color">
-          <li><i style="background:var(--accent)"></i><b>Accent</b><span>actions only</span></li>
-          <li><i style="background:#1f8a5b"></i><b>Green</b><span>healthy</span></li>
-          <li><i style="background:#b7791f"></i><b>Amber</b><span>warning, degraded</span></li>
-          <li><i style="background:#c2413b"></i><b>Red</b><span>down, error</span></li>
-          <li><i style="background:var(--ring-e)"></i><b>Cyan</b><span>engineering view</span></li>
-          <li><i style="background:var(--ring-c)"></i><b>Pink</b><span>customer view</span></li>
-          <li><i style="background:var(--ring-p)"></i><b>Violet</b><span>product view</span></li>
-        </ul>
-      </div>
-      <div class="dn">
-        <h3>Layout and access</h3>
-        <p class="dn-lead">Calm structure, usable by everyone.</p>
-        <ul class="dn-list">
-          <li>Two-column grid; featured work spans both. One column under 720px.</li>
-          <li>Reading text stays near 66 characters a line.</li>
-          <li>Space groups things first; lines are a last resort.</li>
-          <li>Touch targets are at least 44px on tablets and phones.</li>
-          <li>Visible keyboard focus, dark mode, and motion that turns off under reduced-motion settings.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <section id="contact" class="home-sec contact-sec">
     <h2 class="big-cta">Let's make something people enjoy using.</h2>
@@ -922,7 +863,6 @@ body{padding-bottom:72px}
   <header class="cs-head">
     <h1>Redesigning a network performance platform around how engineers actually troubleshoot</h1>
     <dl class="facts"><div><dt>Client</dt><dd>National wireless carrier, via Incedo</dd></div><div><dt>Role</dt><dd>UX research, UI design, front end</dd></div><div><dt>Stack</dt><dd>React, TypeScript, MUI, Node.js</dd></div><div><dt>Result</dt><dd>25% less duplicated UI code</dd></div></dl>
-    <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
     <p class="intro">RF and system performance engineers use this platform every day to find and fix network problems across 220+ markets, thousands of sites per market, 4G LTE and 5G NR, and equipment from several vendors. It had grown one request at a time. I sat with engineers to learn how they really work, redesigned the core workflow in code, and rebuilt the UI on one shared component library.</p>
@@ -941,9 +881,9 @@ body{padding-bottom:72px}
     </ol>
   </div>
   <figure class="flowfig">
-    <svg viewBox="0 0 906 112" role="img" aria-labelledby="fl-title"><title id="fl-title">Investigation path: ticket, then site, then KPI trend, then outages and changes, then action</title>
+    <svg viewBox="0 0 906 92" role="img" aria-labelledby="fl-title"><title id="fl-title">Investigation path: ticket, then site, then KPI trend, then outages and changes, then action</title>
       <defs><marker id="fl-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" class="fl-ah"/></marker></defs>
-      <g><rect x="10" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="85.0" y="55" text-anchor="middle" class="fl-t">Ticket</text><text x="85.0" y="100" text-anchor="middle" class="fl-n">01</text></g><path d="M164 50 H188" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="194" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="269.0" y="55" text-anchor="middle" class="fl-t">Site</text><text x="269.0" y="100" text-anchor="middle" class="fl-n">02</text></g><path d="M348 50 H372" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="378" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="453.0" y="55" text-anchor="middle" class="fl-t">KPI trend</text><text x="453.0" y="100" text-anchor="middle" class="fl-n">03</text></g><path d="M532 50 H556" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="562" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="637.0" y="55" text-anchor="middle" class="fl-t">Outages &amp; changes</text><text x="637.0" y="100" text-anchor="middle" class="fl-n">04</text></g><path d="M716 50 H740" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="746" y="22" width="150" height="56" rx="10" class="fl-box fl-end"/><text x="821.0" y="55" text-anchor="middle" class="fl-t">Action</text><text x="821.0" y="100" text-anchor="middle" class="fl-n">05</text></g>
+      <g><rect x="10" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="85.0" y="55" text-anchor="middle" class="fl-t">Ticket</text></g><path d="M164 50 H188" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="194" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="269.0" y="55" text-anchor="middle" class="fl-t">Site</text></g><path d="M348 50 H372" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="378" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="453.0" y="55" text-anchor="middle" class="fl-t">KPI trend</text></g><path d="M532 50 H556" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="562" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="637.0" y="55" text-anchor="middle" class="fl-t">Outages &amp; changes</text></g><path d="M716 50 H740" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="746" y="22" width="150" height="56" rx="10" class="fl-box fl-end"/><text x="821.0" y="55" text-anchor="middle" class="fl-t">Action</text></g>
     </svg>
     <figcaption>The path engineers already followed on every ticket. The redesign keeps each step one click from the last, instead of one tool per step.</figcaption>
   </figure>
@@ -986,11 +926,11 @@ body{padding-bottom:72px}
   <div class="prose">
     <h2><i class="hd hd-p"></i>Design decisions</h2>
     <ul>
-      <li><b>Simplicity: fewer screens, not more.</b> I removed duplicate screens and patterns instead of adding new ones; the result was 25% less UI code.</li>
-      <li><b>Color meaning: status first.</b> A colored dot and a short label on every row, so problems stand out before you read. Color always comes with a word, never alone.</li>
-      <li><b>Visual hierarchy: summary before detail.</b> Three numbers for the whole market on top, then only the sites that need attention, sorted by urgency.</li>
-      <li><b>Layout: fewer steps.</b> Search, filters and the KPI trend on the same screen as the list, so a ticket no longer means opening four tools.</li>
-      <li><b>Consistency: one pattern everywhere.</b> The same navigation and table behavior on every page, so engineers learn it once.</li>
+      <li><b>Fewer screens, not more.</b> I removed duplicate screens and patterns instead of adding new ones; the result was 25% less UI code.</li>
+      <li><b>Status first.</b> A colored dot and a short label on every row, so problems stand out before you read. Color always comes with a word, never alone.</li>
+      <li><b>Summary before detail.</b> Three numbers for the whole market on top, then only the sites that need attention, sorted by urgency.</li>
+      <li><b>Fewer steps.</b> Search, filters and the KPI trend on the same screen as the list, so a ticket no longer means opening four tools.</li>
+      <li><b>One pattern everywhere.</b> The same navigation and table behavior on every page, so engineers learn it once.</li>
     </ul>
     <h2><i class="hd hd-e"></i>A shared component library</h2>
     <p>I built the UI on Material UI with one theme for color, type and spacing, and a small set of components on top. Status colors are reserved for state; the accent is only for actions. Every new page now looks and behaves the same without extra work.</p>
@@ -1037,7 +977,6 @@ body{padding-bottom:72px}
   <header class="cs-head">
     <h1>Letting engineers analyze any part of the network by drawing on a map</h1>
     <dl class="facts"><div><dt>Client</dt><dd>National wireless carrier, via Incedo</dd></div><div><dt>Role</dt><dd>Design and build</dd></div><div><dt>Stack</dt><dd>WebGL, GeoJSON/KML, GeoServer, Python, Kafka</dd></div><div><dt>Result</dt><dd>~50% less troubleshooting time</dd></div></dl>
-    <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
     <p class="intro">Network problems are local: a stadium on game day, a storm path, a new neighborhood, a market boundary. But the data lived in tables. To study an area, engineers exported site lists, matched them to KPIs in spreadsheets, and rebuilt the same report next time. I built map tools that turn that into a few clicks.</p>
@@ -1138,7 +1077,6 @@ body{padding-bottom:72px}
   <header class="cs-head">
     <h1>An AI assistant that helps network engineers decide what to fix first</h1>
     <dl class="facts"><div><dt>Client</dt><dd>National wireless carrier, via Incedo</dd></div><div><dt>Role</dt><dd>Concept, design, build, pilot</dd></div><div><dt>Stack</dt><dd>Gemini API, React, prompt design</dd></div><div><dt>Status</dt><dd>Piloted with engineers</dd></div></dl>
-    <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
     <p class="intro">The platform had plenty of data but left the diagnosis to people. For every ticket, engineers checked KPI trends, alarms, outages and recent changes, then decided on a cause and a fix. Experienced engineers did this quickly; newer ones took much longer. I designed and built a generative AI assistant that does the first pass and shows its evidence, demoed it to client leadership, and piloted it with engineers.</p>
@@ -1197,61 +1135,10 @@ body{padding-bottom:72px}
     <h2><i class="hd hd-p"></i>What I learned</h2>
     <p>Stakeholders understood the idea in minutes once they could see it working; a working prototype answers questions a slide deck only raises. The pilot taught me even more: engineers trusted a suggestion once they could see which data it came from, so evidence matters more than eloquence.</p>
   </div>
-  <a class="next" href="#tv-concept">Next: Venue display concept →</a>
+  <a class="next" href="#home">← Back to all work</a>
 </article>
 
 <!-- ================= VENUE TV CONCEPT ================= -->
-<article id="v-tv-concept" class="view cs" hidden>
-  <a class="back" href="#home">← All work</a>
-  <header class="cs-head">
-    <h1>Designing a shared screen people glance at from a distance, and the app owners use to run it</h1>
-    <dl class="facts"><div><dt>Type</dt><dd>Concept project, 2026</dd></div><div><dt>Role</dt><dd>Problem framing, UX, UI, code</dd></div><div><dt>Stack</dt><dd>Vue 3, TypeScript, Vite</dd></div><div><dt>Try it</dt><dd><a href="concept/venue-tv/" target="_blank" rel="noopener">Live demo ↗</a></dd></div></dl>
-    <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
-  </header>
-  <div class="prose">
-    <p class="intro">Most of my work is tools people use up close. I wanted to design the opposite: a screen in a gym, café or waiting room that people glance at from ten feet away, rarely touch and often can't hear, plus the web app a business owner uses to keep every screen running. This is a self-initiated concept; the venue, channels and content are invented.</p>
-    <h2><i class="hd hd-c"></i>The problem, from three sides</h2>
-    <ul>
-      <li><b>Viewers glance, they don't browse.</b> The screen has to make sense in two seconds, from across a room, usually with the sound off.</li>
-      <li><b>Owners only look when something is wrong.</b> They don't think about their TVs until one goes dark or shows the wrong thing.</li>
-      <li><b>Staff have a remote and no training.</b> Whoever is at the front desk may need to change a channel in a few presses.</li>
-    </ul>
-    <h2><i class="hd hd-p"></i>Constraints I designed for</h2>
-    <ul>
-      <li><b>Readable at distance.</b> On a 1920 × 1080 stage, nothing is smaller than 26px, body text is 32px and titles are 72 to 76px.</li>
-      <li><b>Remote only.</b> Every action works with arrow keys, OK and Back. Focus is a thick white outline plus a slight scale, so it's obvious from a couch.</li>
-      <li><b>Safe areas.</b> All text sits inside a 5% margin, because many TVs crop the edges. A toggle shows the boundary.</li>
-      <li><b>Sound off by default.</b> Captions are on, because most venues play TVs muted.</li>
-      <li><b>Nobody touching it.</b> The screen rests in a quiet watch mode. Browse opens on any remote press and closes itself after a short idle period.</li>
-    </ul>
-  </div>
-  <figure class="demo">
-    <iframe class="cs-embed" src="concept/venue-tv/index.html?embed=1" title="Venue display concept: live demo" loading="lazy"></iframe>
-    <p class="embed-fallback"><a class="btn btn-primary" href="concept/venue-tv/" target="_blank" rel="noopener">Open the live demo ↗</a></p>
-    <figcaption>Live demo. Click the TV and use your arrow keys, Enter and Esc, or change a channel in the owner app and watch the TV follow. <a href="concept/venue-tv/" target="_blank" rel="noopener">Open full screen ↗</a></figcaption>
-  </figure>
-  <div class="prose">
-    <h2><i class="hd hd-p"></i>Design decisions</h2>
-    <ul>
-      <li><b>Two modes, not one busy screen.</b> Watch mode shows the content, a lower third and captions. Browse mode is a dark overlay with now playing, up next, channels and settings.</li>
-      <li><b>Focus memory.</b> Each row remembers where you were, so moving down and back up returns you to the same tile. With a remote, every extra press costs patience.</li>
-      <li><b>Problems first in the owner app.</b> Offline screens and pending updates sit at the top with a plain-language cause and one action: Restart remotely or Install now.</li>
-      <li><b>Status in words, not only color.</b> Every dot has a label (Playing, Offline, Update ready), for quick scanning and for color-blind owners.</li>
-      <li><b>One source of truth.</b> The TV and the app share one store, so a channel change in either place shows up in the other right away, the way a real device picks up a new playlist.</li>
-    </ul>
-    <h2><i class="hd hd-e"></i>How I built it</h2>
-    <p>Vue 3 single-file components in TypeScript (strict mode), built with Vite. A small composable, <code>useRemoteNav</code>, handles D-pad movement and focus memory. The TV is drawn on a fixed 1920 × 1080 stage and scaled to fit, so type sizes are real TV pixels. Program art is generated SVG instead of video, so the concept uses no real footage or brands. I built it with AI coding assistance, then reviewed the code and tested every interaction by keyboard, at phone width and in an automated browser.</p>
-    <h2><i class="hd hd-p"></i>What I would measure if it shipped</h2>
-    <ul>
-      <li>Time from a screen going offline to the owner fixing it.</li>
-      <li>How often staff open browse mode, and whether they reach a channel in three presses or fewer.</li>
-      <li>Captions on versus off by venue type, to set better defaults.</li>
-    </ul>
-    <h2><i class="hd hd-p"></i>What I learned</h2>
-    <p>Designing for distance means designing with fewer choices: one clear action at a time, bigger everything, and a screen that's useful even when nobody touches it. The owner app taught the same lesson from the other side: the best dashboard is the one you only need when something's wrong.</p>
-  </div>
-  <a class="next" href="#home">← Back to all work</a>
-</article>
 
 <!-- ================= T-MOBILE ================= -->
 
@@ -1261,7 +1148,7 @@ body{padding-bottom:72px}
 </main>
 
 <nav class="dock" id="dock" aria-label="Quick contact"><a href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Resume</a><a href="https://www.linkedin.com/in/anusha15/" target="_blank" rel="noopener">LinkedIn</a><button type="button" id="dockmail">Copy email</button></nav>
-<footer>Screens are recreated with sample data to protect client confidentiality. Built by hand in HTML, CSS, JavaScript and WebGL; the venue display concept is built with Vue and TypeScript.</footer>
+<footer>Screens are recreated with sample data to protect client confidentiality. Built by hand in HTML, CSS, JavaScript and WebGL.</footer>
 </div>
 
 <script>
@@ -1316,7 +1203,6 @@ document.getElementById('run').addEventListener('click',function(){
 
 /* ---------- Ask about my work ---------- */
 var FACTS=[
-'This portfolio site follows its own design system: an 8-step type scale (12, 14, 16, 18, 20, 26, 32, 40 px), colors that each mean one thing (blue accent for actions, green healthy, amber warning, red down, and cyan, pink and violet for the engineering, customer and product views), a two-column grid that becomes one column under 720 px, 44 px touch targets on touch screens, visible keyboard focus, dark mode and reduced-motion support.',
 'Anusha Anumula is a full-stack AI engineer, currently Full Stack AI Engineer (official title: Technical Lead) at Incedo (June 2024–present), working for a national wireless carrier, based in Dallas TX.',
 'Her line: "I design and build interfaces that turn dense data into clear decisions."',
 'Network performance platform (national wireless carrier client): used by 1,000+ RF and performance engineers across 220+ U.S. markets, thousands of sites per market, 4G LTE and 5G NR, several equipment vendors; it processes 10M+ KPI records a day. Pain points: engineers jumped between KPI reports, outage lists, alarms and the ticket queue; similar screens had been rebuilt several ways; dense, slow views. She interviewed engineers and watched them work real tickets (ticket, site, KPI trend, outages or changes, action), prototyped the flow in React, demoed every sprint and iterated. She built a shared component library on Material UI with React and TypeScript and one theme. Results: 25% less duplicated UI code, fewer clicks from ticket to evidence, fewer bugs and support tickets, 20+ features delivered since 2024, Best Deliverables recognition.',
@@ -1327,11 +1213,9 @@ var FACTS=[
 'TracFone (Associate Engineer to Software Engineer, 2019–2021): shop and order flows for several prepaid wireless brands, B2B and B2C, on IBM WebSphere Commerce across order, payment, member and catalog systems; owned resolution of stuck orders; Spring services; 30% faster DB2 queries; 100+ unit tests; Jenkins/Docker CI/CD. University of North Texas: MS Computer Science, GPA 3.9, graduate research and teaching assistant.',
 'Skills: TypeScript, JavaScript, React, Redux, Material UI, WebGL, interactive maps, Node.js, Express, Python, FastAPI, Java, Spring Boot, Kafka, Airflow, SQL, SingleStore, PostgreSQL, AWS, Docker, Kubernetes, Git and code review, CI/CD, LLM APIs (Gemini, Claude, OpenAI), LangChain, LangGraph, RAG, MCP, Claude Code, GitHub Copilot.',
 'Approach: a bias toward simplicity in design and code: fewer screens, one pattern everywhere, less code. On the network performance platform she removed duplicate screens and patterns instead of adding new ones, cutting duplicated UI code by 25%.',
-'Venue display concept (self-initiated, 2026): a screen designed to be read at a distance (a 10-foot UI) for venues such as gyms, cafés and waiting rooms, and the owner web app that manages every screen. Built in Vue 3, TypeScript and Vite. TV: 1920x1080 stage, nothing smaller than 26px, remote D-pad focus navigation with focus memory, 5% safe areas, captions on by default, quiet watch mode with a browse overlay that closes itself. Owner app: alerts first (offline, update ready) with one-click fixes, screen list with status in words, channel and daypart schedule, captions toggle; the TV and app share one store. Live demo on her portfolio.',
 'Contact: anumula.anusha@outlook.com. Based in Dallas, Texas.'
 ].join('\n');
 var FAQ=[
- {k:['typograph','type scale','font','color','colour','grid','layout','spacing','design system','hierarchy','token'],a:'The site follows its own system: an 8-step type scale, colors that each mean one thing (the blue accent is only for actions, amber only for warnings), a two-column grid, and 44px touch targets on phones. At work she applies the same ideas: status colors only for state, summary before detail, one shared component library and theme.',s:[['How this site is designed','#design'],['Platform redesign','#ops-portal']]},
  {k:['system','component','library','mui','material','theme','tokens'],a:'Yes. On the network performance platform she built a shared component library on Material UI with React and TypeScript, with one theme for color, spacing and type. That cut duplicated UI code by 25% and made every page behave the same way.',s:[['Design system','#ops-portal']]},
  {k:['design','designed','ux','ui','screens','flows','figma','research'],a:'She owns the design, not just the build. On the network performance platform she interviewed RF engineers and watched them work real tickets, found the path most investigations follow, prototyped that flow in React, demoed builds every sprint and iterated. Her design decisions: status first, summary before detail, fewer steps, one pattern everywhere.',s:[['Platform redesign','#ops-portal']]},
  {k:['ai','llm','gemini','copilot','claude','prompt','genai','agent','rag','langgraph'],a:'She built and piloted a generative AI assistant on the Gemini API that reads a site\'s KPIs, alarms and open tickets and suggests the likely cause, next steps and ticket priority. She also ships with Claude Code subagents and Playwright checks (about 2x delivery) and built AI code-review prompts. Side projects use RAG and LangGraph agents.',s:[['AI assistant','#ai-assistant']]},
@@ -1340,10 +1224,9 @@ var FAQ=[
  {k:['t-mobile','tmobile','subscription','dashboard','accessib','responsive'],a:'At T-Mobile she designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility. User satisfaction rose 40%.',s:[['Experience','#about']]},
  {k:['result','impact','metric','strongest','number','best'],a:'About 50% less troubleshooting and reporting time from the map tools, 25% less duplicated UI code after the platform redesign, 40% higher user satisfaction at T-Mobile, and 20% better reliability from faster diagnosis. She also earned Best Deliverables recognition.',s:[['Work','#work']]},
  {k:['telecom','network','rf','kpi','5g','lte','ran'],a:'Her current platform serves RF and performance engineers across 220+ U.S. markets, with KPIs at sector-carrier level for 4G LTE and 5G NR from several equipment vendors, plus outages, alarms and network planning data.',s:[['Platform redesign','#ops-portal']]},
- {k:['vue','react','typescript','stack','code','engineer','pull','git','python'],a:'She ships production React and TypeScript, working in real codebases with Git, pull requests and code review. Behind the UI she works in Node.js, Python and Java/Spring Boot. Her venue display concept is built in Vue 3 and TypeScript.',s:[['Platform redesign','#ops-portal'],['Venue display concept','#tv-concept']]},
+ {k:['vue','react','typescript','stack','code','engineer','pull','git','python'],a:'She ships production React and TypeScript, working in real codebases with Git, pull requests and code review. Behind the UI she works in Node.js, Python and Java/Spring Boot.',s:[['Platform redesign','#ops-portal']]},
  {k:['user','users','customer','feedback','talk'],a:'She talks directly with the people who use her work: interviews, watching real tickets, demos every sprint, and changes after launch such as reworked navigation and filters, simpler dense layouts and faster screens.',s:[['After launch','#ops-portal']]},
  {k:['simple','simplicity','minimal','approach','philosophy','principle','clean'],a:'She keeps design and code simple: fewer screens, one pattern everywhere, less code. On the network performance platform she removed duplicate screens and patterns instead of adding new ones, cutting duplicated UI code by 25%.',s:[['Platform redesign','#ops-portal']]},
- {k:['tv','10-foot','10 ft','ten-foot','remote','venue','television','screen'],a:'Her venue display concept is a screen designed to be read at a distance, for gyms, cafés and waiting rooms, plus the owner web app that manages every screen. It is built in Vue 3 and TypeScript, with remote-friendly focus navigation, large type, safe areas, captions on by default and an alerts-first owner app. There is a live demo on the page.',s:[['Venue display concept','#tv-concept']]},
  {k:['contact','email','hire','reach'],a:'Email anumula.anusha@outlook.com. She is based in Dallas, Texas.',s:[['Contact','#contact']]}
 ];
 function localAnswer(q){var w=q.toLowerCase(),best=null,bs=0;FAQ.forEach(function(f){var sc=0;f.k.forEach(function(k){if(w.indexOf(k)>=0)sc++;});if(sc>bs){bs=sc;best=f;}});
@@ -1485,37 +1368,6 @@ box.addEventListener('mousemove',function(e){var r=box.getBoundingClientRect(),x
     tip.innerHTML='<b>'+s.name+'</b><span>'+s.city+' · '+lbl+' · '+s.la.toFixed(2)+', '+s.lo.toFixed(2)+'</span>';tip.style.left=p[0]+'px';tip.style.top=p[1]+'px';tip.hidden=false;}
   if(reduce)draw(0);});
 box.addEventListener('mouseleave',function(){hoverIdx=-1;tip.hidden=true;if(reduce)draw(0);});
-/* ---------- fleet concept ---------- */
-(function(){
-  var svg=document.getElementById('fleetmap');if(!svg)return;var NS='http://www.w3.org/2000/svg';
-  var pad=16,s=Math.min((400-2*pad)/(maxX-minX),(360-2*pad)/(maxY-minY)),ox=(400-(maxX-minX)*s)/2,oy=(360-(maxY-minY)*s)/2;
-  function P(lo,la){return[ox+(lo*cosL-minX)*s,oy+(maxY-la)*s]}
-  var d=TX.map(function(p,i){var q=P(p[0],p[1]);return (i?'L':'M')+q[0].toFixed(1)+' '+q[1].toFixed(1)}).join(' ')+'Z';
-  var land=document.createElementNS(NS,'path');land.setAttribute('d',d);land.setAttribute('fill','#1b2340');land.setAttribute('stroke','#2b3557');svg.appendChild(land);
-  var names=['Dallas','Houston','Austin','San Antonio','Fort Worth','El Paso','Lubbock','Corpus Christi','Waco','McAllen','Amarillo','Tyler'];
-  var V=names.map(function(n,i){var c=cities.filter(function(x){return x[0]===n})[0];var screens=3+((i*7)%6);var off=(i===2||i===6)?1:(i===9?2:0);var warn=(i===4)?1:0;
-    return {name:'Corner Tap · '+n,lo:c[1],la:c[2],screens:screens,off:off,warn:warn}});
-  var sel=-1,filter='all';
-  function status(v){return v.off?'bad':v.warn?'warn':'ok'}
-  var COLH={ok:'#4cc38a',warn:'#e8b04f',bad:'#f07a72'};
-  function render(){
-    [].slice.call(svg.querySelectorAll('.venue')).forEach(function(g){g.remove()});
-    var list=V.map(function(v,i){return [v,i]}).filter(function(x){return filter==='all'||status(x[0])!=='ok'});
-    list.forEach(function(x){var v=x[0],i=x[1],p=P(v.lo,v.la),st=status(v),g=document.createElementNS(NS,'g');g.setAttribute('class','venue'+(i===sel?' sel':''));g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',v.name+', '+v.screens+' screens, '+(v.off?v.off+' offline':'all online'));
-      if(st==='bad'){var pc=document.createElementNS(NS,'circle');pc.setAttribute('cx',p[0]);pc.setAttribute('cy',p[1]);pc.setAttribute('r',6);pc.setAttribute('fill','none');pc.setAttribute('stroke',COLH.bad);pc.setAttribute('class','ping');g.appendChild(pc);}
-      var c=document.createElementNS(NS,'circle');c.setAttribute('class','core');c.setAttribute('cx',p[0]);c.setAttribute('cy',p[1]);c.setAttribute('r',4+v.screens*0.6);c.setAttribute('fill',COLH[st]);c.setAttribute('fill-opacity','.9');g.appendChild(c);
-      g.addEventListener('click',function(){pick(i)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(i)}});svg.appendChild(g);});
-    var tot=V.reduce(function(a,v){return a+v.screens},0),off=V.reduce(function(a,v){return a+v.off},0);
-    document.getElementById('fleetsum').innerHTML='<div><small>Venues</small><b>'+V.length+'</b></div><div><small>Screens</small><b>'+tot+'</b></div><div><small>Offline</small><b style="color:'+COLH.bad+'">'+off+'</b></div>';
-    var order={bad:0,warn:1,ok:2};list.sort(function(a,b){return order[status(a[0])]-order[status(b[0])]});
-    document.getElementById('fleetlist').innerHTML=list.map(function(x){var v=x[0],st=status(x[0]);return '<button type="button" data-i="'+x[1]+'" class="'+(x[1]===sel?'sel':'')+'"><i class="dot d-'+st+'"></i><span>'+v.name+'<small>'+v.screens+' screens'+(v.off?' · '+v.off+' offline':v.warn?' · 1 weak signal':' · all playing')+'</small></span><span class="pill">'+(v.off?'Fix':'Open')+'</span></button>'}).join('');
-    [].slice.call(document.querySelectorAll('#fleetlist button')).forEach(function(b){b.addEventListener('click',function(){pick(+b.dataset.i)})});
-  }
-  function pick(i){sel=i;render();}
-  document.querySelectorAll('[data-fleet]').forEach(function(b){b.addEventListener('click',function(){filter=b.dataset.fleet;document.querySelectorAll('[data-fleet]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});render();})});
-  render();
-})();
-
 /* ---------- v21: work visuals + demos ---------- */
 (function(){
   var tx=document.getElementById('txmini');
@@ -1542,7 +1394,7 @@ function loop(t){if(visibleOnScreen){draw(t);}requestAnimationFrame(loop);}
 if(reduce){draw(0);}else requestAnimationFrame(loop);
 /* ---------- simple router ---------- */
 (function(){
-  var views=['ops-portal','maps','ai-assistant','tv-concept'];
+  var views=['ops-portal','maps','ai-assistant'];
   function route(){
     var t=(location.hash||'#home').slice(1)||'home',isCase=views.indexOf(t)>=0;
     document.querySelectorAll('.view').forEach(function(v){v.hidden=isCase?v.id!=='v-'+t:v.id!=='v-home';});
