@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Anusha Anumula</title>
 <link rel="canonical" href="https://anushabuilds.vercel.app/">
-<meta property="og:title" content="Anusha Anumula · Full-stack developer · UI, product & AI">
+<meta property="og:title" content="Anusha Anumula · Full-stack AI engineer · UI, product & AI">
 <meta property="og:url" content="https://anushabuilds.vercel.app/">
 <meta property="og:type" content="website">
-<meta name="description" content="Anusha Anumula: full-stack developer focused on UI, product and AI. Case studies from Verizon, T-Mobile and TracFone.">
+<meta name="description" content="Anusha Anumula: full-stack AI engineer focused on UI, product and AI. Case studies from telecom network operations, consumer wireless and e-commerce.">
 <style>:root{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 /* ===== size pass: calmer type ===== */
 .hero h1{font-size:clamp(1.75rem,3.5vw,2.6rem)!important;line-height:1.18!important;max-width:24ch!important;letter-spacing:-.02em!important}
@@ -143,7 +143,7 @@ header.top nav a:hover{color:var(--ink)}
 .after-ui aside{display:grid;gap:3px;align-content:start;font-size:.74rem}
 .after-ui aside span{padding:6px 8px;border-radius:6px;color:var(--screen-muted)}
 .after-ui aside span.on{background:var(--screen-3);color:var(--screen-ink)}
-.after-ui main{display:grid;gap:10px;align-content:start;min-width:0}
+.after-ui .after-main{display:grid;gap:10px;align-content:start;min-width:0}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .kpi{background:var(--screen-3);border-radius:8px;padding:8px 10px}
 .kpi small{display:block;color:var(--screen-muted);font-size:.64rem}
@@ -174,7 +174,7 @@ header.top nav a:hover{color:var(--ink)}
 /* case 3: assistant */
 .assist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
 .alert{background:var(--screen-2);border-radius:12px;padding:14px;border-left:3px solid var(--s-bad);min-width:0;display:grid;gap:6px;align-content:start}
-.alert h4,.rec h4{font:600 .98rem var(--f-body)}
+.alert h4,.rec h4,.alert h3,.rec h3{font:600 .98rem var(--f-body)}
 .alert p{color:var(--screen-muted)}
 .spark{width:100%;height:70px;display:block;margin-top:6px}
 .rec{background:var(--screen-2);border-radius:12px;padding:14px;display:grid;gap:10px;min-width:0;align-content:start}
@@ -635,47 +635,118 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
 .sh-nav{display:flex;justify-content:space-between}
 .shopdemo .sbtn{background:#eceef3;color:#11131a;border-color:#e1e3ea}.shopdemo .sbtn.primary{background:#11131a;color:#fff;border-color:#11131a}
 .shopdemo .sbtn:disabled{opacity:.4}
+
+/* ===== Venue TV concept (case study 6) ===== */
+.v-tv{background:linear-gradient(150deg,#0f5e57,#0a1f2e)}
+.tv-mini{width:100%;max-width:310px;aspect-ratio:16/9;border-radius:10px;border:6px solid #0b0d14;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);background:linear-gradient(160deg,hsl(168 70% 34%),hsl(208 75% 18%));position:relative;color:#fff;overflow:hidden}
+.tv-mini svg{position:absolute;inset:0;width:100%;height:100%}
+.tv-mini .tm-low{position:absolute;left:7%;bottom:11%;display:grid;gap:3px}
+.tv-mini .tm-chip{font:700 .55rem var(--f-body);background:rgba(255,255,255,.2);padding:2px 7px;border-radius:99px;justify-self:start}
+.tv-mini b{font:800 1rem var(--f-body);text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.tv-mini .tm-cap{position:absolute;right:6%;bottom:11%;background:rgba(0,0,0,.75);font:600 .55rem/1.3 var(--f-body);padding:4px 7px;border-radius:5px;max-width:40%}
+.cs-embed{width:100%;height:min(82vh,780px);border:0;border-radius:16px;background:#0d0f17;display:block}
+.embed-fallback{display:none}
+@media (max-width:760px){.cs-embed{display:none}.embed-fallback{display:block}}
+
+/* ===== Design-system pass (Nov 2026) ===== */
+/* Type scale: 8 steps, base 16px. Mock UI screens (.wvis, .demo) keep their own
+   miniature sizes because they recreate real product screens at reduced scale. */
+:root{--t-xs:.75rem;--t-sm:.875rem;--t-base:1rem;--t-lead:1.125rem;--t-md:1.25rem;--t-lg:1.625rem;--t-xl:2rem;--t-2xl:2.5rem}
+body{font-size:var(--t-base)}
+/* xs 12px: metadata and labels */
+.links span,.btn span,.wco,.rt,.wkpi,.chips i,.kicker,.sec-note,footer,.facts dt,.legend-key,.lens-label,.exp .yr,.ask-mode,.ask-foot,.fb,.note{font-size:var(--t-xs)!important}
+/* sm 14px: controls, navigation and secondary text */
+header.top nav,header.top nav a,.theme-btn,.btn,.qchip,.lens button,.dock a,.dock button,.back,.exp .via,.exp p,.wmeta .sub,.facts dd,.skillgroups h3,.skillgroups p,.links a,.contact-sec code{font-size:var(--t-sm)!important}
+body.lens-engineer .wmeta .sub{font-size:var(--t-xs)!important}
+/* base 16px: reading text */
+.prose p,.prose li,.tldr-list li,.name,.sec-title{font-size:var(--t-base)!important}
+/* lead 18px: opening paragraphs */
+.hero .lede,.prose .intro{font-size:var(--t-lead)!important}
+/* md 20px: section headings and card titles */
+.prose h2,.ask-title,.tldr-card h2,.wtitle,.next{font-size:var(--t-md)!important}
+/* lg 26px: featured card titles */
+.wcard.feature .wtitle{font-size:clamp(var(--t-md),2.4vw,var(--t-lg))!important}
+/* xl 32px / 2xl 40px: page titles */
+.big-cta,.cs-head h1{font-size:clamp(var(--t-lg),3vw,var(--t-xl))!important}
+.hero h1{font-size:clamp(var(--t-xl),3.6vw,var(--t-2xl))!important}
+
+/* Color meaning: amber is reserved for warning, the blue accent for actions.
+   The Product lens moves to violet and Engineering to cyan, so no color carries two meanings. */
+:root{--ring-p:#7a3fe0;--ring-e:#0b8fb3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ring-p:#a98bff;--ring-e:#3cc8ec}}
+:root[data-theme="dark"]{--ring-p:#a98bff;--ring-e:#3cc8ec}
+
+/* Touch targets: at least 44px tall on tablet and phone */
+@media (max-width:900px){
+  .name,.btn,header.top nav a,.theme-btn,.lens button,.dock a,.dock button,.qchip,.back{min-height:44px;display:inline-flex;align-items:center}
+  header.top nav{gap:0 4px}
+  header.top nav a{padding:0 8px}
+  .lens{gap:2px}
+}
+/* Contact dock never covers the end of the page */
+body{padding-bottom:72px}
+.dock.over{transform:translateY(140%)}
+@media (max-width:720px){.dock{display:none}body{padding-bottom:0}}
+
+/* Status line, section numbers, flow figure, design notes */
+.status{display:inline-flex;align-items:center;gap:8px;font:500 var(--t-xs) var(--f-mono);color:var(--muted);letter-spacing:.02em;margin:0}
+.status i{width:8px;height:8px;border-radius:50%;background:#1f8a5b;box-shadow:0 0 0 4px color-mix(in srgb,#1f8a5b 18%,transparent)}
+.sec-num{font:500 var(--t-xs) var(--f-mono);color:var(--accent);margin-right:12px;letter-spacing:0;vertical-align:.12em}
+.flowfig{margin:8px 0 36px}
+.flowfig svg{width:100%;height:auto;display:block;max-width:900px}
+.fl-box{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.fl-end{stroke:var(--accent);stroke-width:2}
+.fl-t{font:600 15px var(--f-body);fill:var(--ink)}
+.fl-n{font:500 11px var(--f-mono);fill:var(--muted)}
+.fl-a{stroke:var(--muted);stroke-width:1.5;fill:none}
+.fl-ah{fill:var(--muted)}
+.flowfig figcaption{font-size:var(--t-xs);color:var(--muted);margin-top:8px;max-width:66ch}
+.dn-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.dn-grid{grid-template-columns:1fr}}
+.dn{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start}
+.dn h3{font-size:var(--t-base);font-weight:700}
+.dn-lead{color:var(--muted);font-size:var(--t-sm)}
+.dn ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.dn-type li{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.dn-type span{font-family:var(--f-display);line-height:1.1}
+.dn-type small,.dn-color span{font:500 var(--t-xs) var(--f-mono);color:var(--muted)}
+.dn-color li{display:grid;grid-template-columns:18px 64px 1fr;align-items:center;gap:8px;font-size:var(--t-sm)}
+.dn-color i{width:18px;height:18px;border-radius:50%}
+.dn-list li{font-size:var(--t-sm);padding-left:14px;position:relative}
+.dn-list li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* Hero: compact, two columns on wide screens so the first project shows without scrolling */
+.hero{padding-block:48px 28px!important}
+@media (min-width:1000px){
+  .hero-txt{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);column-gap:56px;align-items:end}
+  .hero-txt .kicker{grid-column:1/-1}
+  .hero h1{max-width:none!important;margin:0}
+  .hero .lede{max-width:none!important;margin:0;padding-bottom:6px}
+}
+@media (max-width:480px){.theme-btn{display:none!important}.hero{padding-block:24px 20px!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="top">
   <a class="name" href="#home">Anusha Anumula</a>
-  <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-resume" href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><button type="button" class="theme-btn" id="themebtn" aria-label="Switch color theme">Theme: auto</button></nav>
+  <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#design">Design</a><a href="#contact">Contact</a><a class="nav-resume" href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><button type="button" class="theme-btn" id="themebtn" aria-label="Switch color theme">Theme: auto</button></nav>
 </header>
 
 <!-- ================= HOME ================= -->
-<main id="v-home" class="view">
+<main id="content">
+<div id="v-home" class="view">
   <section class="hero">
     <div class="hero-txt">
-      <p class="kicker">Full-stack developer · UI, product &amp; AI</p>
-      <h1>I operate at the intersection of <span class="w-e">engineering</span>, <span class="w-c">customers</span> and <span class="w-p">product</span>.</h1>
-      <p class="lede">Passionate, curious and hands-on. 5+ years across telecom and retail: I talk to the people who use the tool, design it in code, ship it in React and TypeScript, and keep improving it after launch. I keep things simple: fewer screens, one pattern, less code.</p>
+      <p class="kicker">Front-end and full-stack engineer · UI, product &amp; AI</p>
+      <h1>I design and build interfaces that turn dense data into clear decisions.</h1>
+      <p class="lede">Most recently, tools for network engineers: a performance platform, map-based analysis and an AI triage assistant. I start by watching how people work, then design the workflow and build it in React and TypeScript.</p>
     </div>
     
   </section>
 
-  <section class="lens-bar" aria-label="Choose what to focus on">
-    <span class="lens-label">I'm reading as</span>
-    <div class="lens" role="group">
-      <button type="button" data-lens="all" aria-pressed="true">Anyone</button>
-      <button type="button" data-lens="recruiter" aria-pressed="false">Recruiter</button>
-      <button type="button" data-lens="designer" aria-pressed="false">Designer</button>
-      <button type="button" data-lens="engineer" aria-pressed="false">Engineer</button>
-    </div>
-  </section>
-  <section class="tldr-card" id="tldr" hidden>
-    <h2>The 30-second version</h2>
-    <ul class="tldr-list">
-      <li><b>5+ years</b> shipping production web apps in telecom and retail</li>
-      <li><b>25%</b> less duplicated UI code after rebuilding a Verizon ops portal on a shared MUI library</li>
-      <li><b>40%</b> higher user satisfaction on a T-Mobile React dashboard</li>
-      <li><b>AI daily:</b> Claude, Copilot and Gemini; built a Gemini root-cause assistant and demoed it to the client</li>
-    </ul>
-    <div class="tldr-cta"><a class="btn btn-primary" href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Open resume</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/anusha15/" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn-ghost" href="#contact">Email</a></div>
-  </section>
   <section id="work" class="home-sec">
-    <div class="sec-row"><h2 class="sec-title">Selected work</h2><span class="sec-note">5 projects · 2019 – now</span></div>
+    <div class="sec-row"><h2 class="sec-title">Selected work</h2><span class="sec-note">4 projects · 2024 – now</span></div>
     <div class="wgrid">
 
       <a class="wcard feature" href="#ops-portal">
@@ -683,17 +754,17 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
           <div class="mw">
             <div class="mw-side"><i class="on"></i><i></i><i></i><i></i></div>
             <div class="mw-main">
-              <div class="mw-kpis"><span><small>Running</small>142</span><span><small>Delayed</small><em class="w">6</em></span><span><small>Failed</small><em class="b">2</em></span></div>
-              <div class="mw-row"><i class="dot d-bad"></i><span>ETL · AUS-11</span><b>Failed 3m</b></div>
-              <div class="mw-row"><i class="dot d-warn"></i><span>Workflow · DAL-09</span><b>Delayed 11m</b></div>
-              <div class="mw-row"><i class="dot d-ok"></i><span>ETL · DAL-04</span><b>Running</b></div>
+              <div class="mw-kpis"><span><small>Healthy</small>1,962</span><span><small>Degraded</small><em class="w">31</em></span><span><small>Down</small><em class="b">4</em></span></div>
+              <div class="mw-row"><i class="dot d-bad"></i><span>AUS0119 · all sectors</span><b>Site down</b></div>
+              <div class="mw-row"><i class="dot d-warn"></i><span>DAL0412 · S2 · LTE</span><b>Drops 2.4%</b></div>
+              <div class="mw-row"><i class="dot d-ok"></i><span>HOU0087 · S3 · 5G</span><b>Normal</b></div>
             </div>
           </div>
         </div>
         <div class="wmeta">
-          <span class="wco">Verizon · 2024 – now</span>
-          <b class="wtitle">Network-ops portal rebuild</b>
-          <span class="sub" data-all="Talked to ops users, redesigned the main workflows in code, rebuilt the UI on a shared MUI library." data-designer="Status-first layout, summary before detail, one pattern on every page." data-engineer="React · TypeScript · MUI theme · Redux">Talked to ops users, redesigned the main workflows in code, rebuilt the UI on a shared MUI library.</span>
+          <span class="wco">Enterprise UX · data-dense UI · 2024 – now</span>
+          <b class="wtitle">Network performance platform redesign</b>
+          <span class="sub" data-all="Learned how RF and performance engineers troubleshoot, then redesigned the platform around that path on one shared component library." data-designer="Status-first layout, summary before detail, one pattern on every page." data-engineer="React · TypeScript · MUI theme · Node.js APIs">Learned how RF and performance engineers troubleshoot, then redesigned the platform around that path on one shared component library.</span>
           <span class="wfoot"><span class="wkpi">25% less duplicated UI code</span><span class="rt">4 min read →</span></span>
         </div>
       </a>
@@ -701,61 +772,63 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <a class="wcard" href="#maps">
         <div class="wvis v-map" aria-hidden="true"><svg viewBox="0 0 200 150" class="txmini" id="txmini"></svg></div>
         <div class="wmeta">
-          <span class="wco">Verizon · 2024 – now</span>
-          <b class="wtitle">WebGL maps and live data</b>
-          <span class="sub" data-all="Thousands of network sites on one smooth map, plus GIS diff maps and live flow views." data-designer="Color only means state; diff is a mode, not a separate screen." data-engineer="WebGL point rendering · GeoServer · Python ingest · Kafka">Thousands of network sites on one smooth map, plus GIS diff maps and live flow views.</span>
-          <span class="wfoot"><span class="wkpi">20% better reliability</span><span class="rt">3 min read →</span></span>
+          <span class="wco">Geospatial · data visualization · 2024 – now</span>
+          <b class="wtitle">Map-based KPI analysis</b>
+          <span class="sub" data-all="Engineers draw an area on a nationwide map and get KPI trends and site lists in seconds, instead of rebuilding spreadsheets by hand." data-designer="Color only means state; what changed is a mode, not another screen." data-engineer="WebGL · GeoJSON/KML · GeoServer · Python · Airflow">Engineers draw an area on a nationwide map and get KPI trends and site lists in seconds, instead of rebuilding spreadsheets by hand.</span>
+          <span class="wfoot"><span class="wkpi">~50% less troubleshooting time</span><span class="rt">4 min read →</span></span>
         </div>
       </a>
 
       <a class="wcard" href="#ai-assistant">
         <div class="wvis v-ai" aria-hidden="true">
           <div class="ai-mini">
-            <span class="ai-tag">Incident · 10:42</span>
-            <b>Lag rising on orders.events</b>
-            <div class="ai-ans"><small>Likely cause</small>A consumer group lost two instances after a deploy</div>
+            <span class="ai-tag">Ticket · DAL0412</span>
+            <b>Drop rate up on Sector 2</b>
+            <div class="ai-ans"><small>Likely cause</small>A handover setting changed the day drops began</div>
             <div class="ai-conf"><i><i></i></i><span>78%</span></div>
           </div>
         </div>
         <div class="wmeta">
-          <span class="wco">Verizon · 2024 – now</span>
-          <b class="wtitle">AI root-cause assistant</b>
-          <span class="sub" data-all="A Gemini prototype that explains the likely cause of an incident and what to do next, demoed to the client." data-designer="Sources and confidence beside every answer; people stay in control." data-engineer="Gemini API · React · streaming UI · prompt design">A Gemini prototype that explains the likely cause of an incident and what to do next, demoed to the client.</span>
-          <span class="wfoot"><span class="wkpi">Concept to client demo</span><span class="rt">3 min read →</span></span>
+          <span class="wco">AI · human in the loop · 2024 – now</span>
+          <b class="wtitle">AI assistant for network triage</b>
+          <span class="sub" data-all="A generative AI assistant that reads a site's KPIs, alarms and open tickets, then suggests the likely cause, next steps and which ticket to work first." data-designer="Evidence and confidence beside every answer; engineers stay in control." data-engineer="Gemini API · prompt design · React · streaming UI">A generative AI assistant that reads a site's KPIs, alarms and open tickets, then suggests the likely cause, next steps and which ticket to work first.</span>
+          <span class="wfoot"><span class="wkpi">Piloted with engineers</span><span class="rt">4 min read →</span></span>
         </div>
       </a>
 
-      <a class="wcard" href="#subscriptions">
-        <div class="wvis v-subs" aria-hidden="true">
-          <div class="sub-mini">
-            <div class="sm-head"><b>Your plan</b><span>3 lines</span></div>
-            <div class="sm-ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" class="tr"/><circle cx="18" cy="18" r="15" class="fg" stroke-dasharray="62 100"/></svg><span>62%<small>data used</small></span></div>
-            <div class="sm-lines"><i></i><i></i><i></i></div>
+      <a class="wcard feature" href="#tv-concept">
+        <div class="wvis v-tv" aria-hidden="true">
+          <div class="tv-mini">
+            <svg viewBox="0 0 160 90" preserveAspectRatio="none"><g fill="none" stroke="hsl(178 90% 66%)" stroke-width="1.4"><path d="M0 40 Q40 32 80 40 T160 40" opacity=".3"/><path d="M0 49 Q40 41 80 49 T160 49" opacity=".45"/><path d="M0 58 Q40 50 80 58 T160 58" opacity=".6"/></g><path d="M0 60 L36 38 L58 52 L86 26 L120 54 L160 36 V90 H0Z" fill="#000" opacity=".22"/></svg>
+            <div class="tm-low"><span class="tm-chip">Calm Planet</span><b>Coastal Cliffs</b></div>
+            <div class="tm-cap">Puffins nest in the rock ledges.</div>
           </div>
         </div>
         <div class="wmeta">
-          <span class="wco">T-Mobile · 2023 – 24</span>
-          <b class="wtitle">Subscription dashboard</b>
-          <span class="sub" data-all="Front-end components for managing plans, usage and billing, built for responsiveness and accessibility." data-designer="Usage you can read at a glance; works the same on phone and desktop." data-engineer="React · Redux · Jest · Spring Boot · Kafka">Front-end components for managing plans, usage and billing, built for responsiveness and accessibility.</span>
-          <span class="wfoot"><span class="wkpi">40% higher user satisfaction</span><span class="rt">2 min read →</span></span>
+          <span class="wco">Self-initiated concept · 2026</span>
+          <b class="wtitle">Designing for distance: a venue display and its owner app</b>
+          <span class="sub" data-all="A shared screen people glance at from a distance and control with a remote, plus the web app owners use to keep every screen running." data-designer="Big type, safe areas, unmistakable focus; problems first in the owner app." data-engineer="Vue 3 · TypeScript · Vite · remote focus navigation">A shared screen people glance at from a distance and control with a remote, plus the web app owners use to keep every screen running.</span>
+          <span class="wfoot"><span class="wkpi">Live demo · Vue + TypeScript</span><span class="rt">4 min read →</span></span>
         </div>
       </a>
 
-      <a class="wcard" href="#shop">
-        <div class="wvis v-shop" aria-hidden="true">
-          <div class="shop-mini">
-            <div class="sh-steps"><span class="done">Phone</span><span class="on">Plan</span><span>Checkout</span></div>
-            <div class="sh-plans"><div><small>Plan</small><b>Basic</b></div><div class="pick"><small>Plan</small><b>Unlimited</b></div><div><small>Plan</small><b>Family</b></div></div>
-          </div>
-        </div>
-        <div class="wmeta">
-          <span class="wco">TracFone · 2019 – 21</span>
-          <b class="wtitle">Shop flows for prepaid brands</b>
-          <span class="sub" data-all="Shop flows for Straight Talk, TracFone and their other B2B and B2C brands, on shared services." data-designer="One flow that works across several brands and customer types." data-engineer="Java · Spring MVC · REST/SOAP · SQL · Jenkins">Shop flows for Straight Talk, TracFone and their other B2B and B2C brands, on shared services.</span>
-          <span class="wfoot"><span class="wkpi">30% faster database queries</span><span class="rt">2 min read →</span></span>
-        </div>
-      </a>
+    </div>
+  </section>
 
+
+  <section id="about" class="home-sec about">
+    <h2 class="sec-title">Experience</h2>
+    <ol class="exp">
+      <li><span class="yr">2024 – now</span><div><b>Full Stack AI Engineer (Technical Lead) · Incedo</b> <span class="via">client: national wireless carrier</span><p>Network performance platform for RF and performance engineers: UX and UI design, front end, map tools, data pipelines and a generative AI assistant.</p><span class="chips"><i>~50% faster triage</i><i>25% less duplicated UI</i></span></div></li>
+      <li><span class="yr">2023 – 24</span><div><b>Java Developer · T-Mobile</b><p>Subscription dashboard in React; user satisfaction up 40%.</p><span class="chips"><i>40% satisfaction</i><i>20% faster queries</i></span></div></li>
+      <li><span class="yr">2022 – 23</span><div><b>Graduate Research &amp; Teaching Assistant · UNT</b><p>MS in Computer Science, GPA 3.9.</p><span class="chips"><i>20% engagement</i><i>GPA 3.9</i></span></div></li>
+      <li><span class="yr">2019 – 21</span><div><b>Software Developer · TracFone</b><p>Shop and order flows for prepaid wireless brands on WebSphere Commerce; Java and Spring services.</p><span class="chips"><i>30% faster SQL</i><i>95% on-time delivery</i></span></div></li>
+    </ol>
+    <div class="skillgroups">
+      <div><h3><i class="t-p"></i>Product &amp; UI</h3><p>User interviews · design in code · prototyping · design systems · data viz · accessibility</p></div>
+      <div><h3><i class="t-e"></i>Front end</h3><p>React · TypeScript · Material UI · Redux · WebGL · HTML/CSS · Jest</p></div>
+      <div><h3><i class="t-c"></i>Back end &amp; data</h3><p>Node.js · Python · Java · Spring Boot · Kafka · Airflow · SQL · AWS</p></div>
+      <div><h3><i class="t-e"></i>AI</h3><p>Claude Code · Gemini API · GitHub Copilot · LangChain · LangGraph · RAG · prompt design · AI code review</p></div>
     </div>
   </section>
 
@@ -783,19 +856,47 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
     </div>
   </section>
 
-  <section id="about" class="home-sec about">
-    <h2 class="sec-title">Experience</h2>
-    <ol class="exp">
-      <li><span class="yr">2024 – now</span><div><b>Full Stack Developer · Verizon</b> <span class="via">via Incedo</span><p>UI design and front end for network-operations tools, WebGL maps, AI prototypes.</p><span class="chips"><i>25% less duplicated UI</i><i>20% reliability</i></span></div></li>
-      <li><span class="yr">2023 – 24</span><div><b>Java Developer · T-Mobile</b><p>Subscription dashboard in React; user satisfaction up 40%.</p><span class="chips"><i>40% satisfaction</i><i>20% faster queries</i></span></div></li>
-      <li><span class="yr">2022 – 23</span><div><b>Graduate Teaching Assistant · UNT</b><p>MS in Computer Science, GPA 3.9.</p><span class="chips"><i>20% engagement</i><i>GPA 3.9</i></span></div></li>
-      <li><span class="yr">2019 – 21</span><div><b>Software Developer · TracFone</b><p>Shop flows for Straight Talk, TracFone and their other B2B and B2C brands; Java and Spring services.</p><span class="chips"><i>30% faster SQL</i><i>95% on-time delivery</i></span></div></li>
-    </ol>
-    <div class="skillgroups">
-      <div><h3><i class="t-p"></i>Product &amp; UI</h3><p>User interviews · design in code · prototyping · design systems · data viz · accessibility</p></div>
-      <div><h3><i class="t-e"></i>Front end</h3><p>React · TypeScript · Material UI · Redux · WebGL · HTML/CSS · Jest</p></div>
-      <div><h3><i class="t-c"></i>Back end &amp; data</h3><p>Node.js · Java · Spring Boot · Python · Kafka · SQL · AWS</p></div>
-      <div><h3><i class="t-e"></i>AI</h3><p>Claude · Gemini API · GitHub Copilot · RAG · prompt design · AI code review</p></div>
+  <section id="design" class="home-sec" aria-labelledby="design-title">
+    <div class="sec-row"><h2 class="sec-title" id="design-title">How this site is designed</h2></div>
+    <div class="dn-grid">
+      <div class="dn">
+        <h3>Type scale</h3>
+        <p class="dn-lead">Eight sizes, each with one job.</p>
+        <ul class="dn-type">
+          <li><span style="font-size:var(--t-2xl)">Aa</span><small>40 · hero</small></li>
+          <li><span style="font-size:var(--t-xl)">Aa</span><small>32 · page title</small></li>
+          <li><span style="font-size:var(--t-lg)">Aa</span><small>26 · feature</small></li>
+          <li><span style="font-size:var(--t-md)">Aa</span><small>20 · section</small></li>
+          <li><span style="font-size:var(--t-lead)">Aa</span><small>18 · intro</small></li>
+          <li><span style="font-size:var(--t-base)">Aa</span><small>16 · body</small></li>
+          <li><span style="font-size:var(--t-sm)">Aa</span><small>14 · controls</small></li>
+          <li><span style="font-size:var(--t-xs)">Aa</span><small>12 · labels</small></li>
+        </ul>
+      </div>
+      <div class="dn">
+        <h3>Color meaning</h3>
+        <p class="dn-lead">Every color means one thing.</p>
+        <ul class="dn-color">
+          <li><i style="background:var(--accent)"></i><b>Accent</b><span>actions only</span></li>
+          <li><i style="background:#1f8a5b"></i><b>Green</b><span>healthy</span></li>
+          <li><i style="background:#b7791f"></i><b>Amber</b><span>warning, degraded</span></li>
+          <li><i style="background:#c2413b"></i><b>Red</b><span>down, error</span></li>
+          <li><i style="background:var(--ring-e)"></i><b>Cyan</b><span>engineering view</span></li>
+          <li><i style="background:var(--ring-c)"></i><b>Pink</b><span>customer view</span></li>
+          <li><i style="background:var(--ring-p)"></i><b>Violet</b><span>product view</span></li>
+        </ul>
+      </div>
+      <div class="dn">
+        <h3>Layout and access</h3>
+        <p class="dn-lead">Calm structure, usable by everyone.</p>
+        <ul class="dn-list">
+          <li>Two-column grid; featured work spans both. One column under 720px.</li>
+          <li>Reading text stays near 66 characters a line.</li>
+          <li>Space groups things first; lines are a last resort.</li>
+          <li>Touch targets are at least 44px on tablets and phones.</li>
+          <li>Visible keyboard focus, dark mode, and motion that turns off under reduced-motion settings.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -813,51 +914,67 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
     </ul>
     <p class="note">Based in Dallas, Texas.</p>
   </section>
-</main>
+</div>
 
 <!-- ================= OPS PORTAL ================= -->
 <article id="v-ops-portal" class="view cs" hidden>
   <a class="back" href="#home">← All work</a>
   <header class="cs-head">
-    <h1>Rebuilding a network-operations portal around how ops teams work</h1>
-    <dl class="facts"><div><dt>Company</dt><dd>Verizon, via Incedo</dd></div><div><dt>Role</dt><dd>UX, UI design, front end</dd></div><div><dt>Stack</dt><dd>React, TypeScript, MUI</dd></div><div><dt>Result</dt><dd>25% less duplicated UI code</dd></div></dl>
+    <h1>Redesigning a network performance platform around how engineers actually troubleshoot</h1>
+    <dl class="facts"><div><dt>Client</dt><dd>National wireless carrier, via Incedo</dd></div><div><dt>Role</dt><dd>UX research, UI design, front end</dd></div><div><dt>Stack</dt><dd>React, TypeScript, MUI, Node.js</dd></div><div><dt>Result</dt><dd>25% less duplicated UI code</dd></div></dl>
     <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
-    <p class="intro">The portal had grown one screen at a time. I talked with the ops users, redesigned the main workflows directly in code, and rebuilt the UI on a shared component library, so problems stand out at a glance and every page works the same way.</p>
-    <h2><i class="hd hd-c"></i>The problem</h2>
-    <p>Similar views had been built several times with slightly different patterns. Users had to relearn each page, finding things took too many clicks, and engineers fixed the same bug in several places.</p>
-    <h2><i class="hd hd-c"></i>What I did</h2>
-    <p>I talked directly with ops users to understand their daily workflows and the pain points they reported. Then I designed in code, prototyping flows and layouts in React so users could react to real screens. I demoed working builds and changed the design based on their feedback.</p>
+    <p class="intro">RF and system performance engineers use this platform every day to find and fix network problems across 220+ markets, thousands of sites per market, 4G LTE and 5G NR, and equipment from several vendors. It had grown one request at a time. I sat with engineers to learn how they really work, redesigned the core workflow in code, and rebuilt the UI on one shared component library.</p>
+    <h2><i class="hd hd-c"></i>The pain points</h2>
+    <ul>
+      <li><b>Too many places to look.</b> One investigation meant jumping between KPI reports, outage lists, alarm views and the ticket queue, each with its own layout.</li>
+      <li><b>The same thing, built several ways.</b> Similar tables and filters had been rebuilt over time, so every page behaved slightly differently and one bug had to be fixed in several places.</li>
+      <li><b>Dense, slow screens.</b> Some views loaded every sector and carrier at once, and the sites that needed attention were buried in long tables.</li>
+    </ul>
+    <h2><i class="hd hd-c"></i>How I approached it</h2>
+    <ol>
+      <li><b>Listened first.</b> I interviewed engineers and watched them work real tickets. Most investigations followed the same path: ticket, then site, then KPI trend, then recent outages or changes, then action.</li>
+      <li><b>Designed that path, not more screens.</b> I sketched the flow, then prototyped it directly in React so engineers reacted to real screens with realistic data.</li>
+      <li><b>Demoed often.</b> Working builds went in front of engineers every sprint, and I changed the design based on what they did, not only what they said.</li>
+      <li><b>Built it to last.</b> One component library and theme, so every new page inherits the same behavior.</li>
+    </ol>
   </div>
+  <figure class="flowfig">
+    <svg viewBox="0 0 906 112" role="img" aria-labelledby="fl-title"><title id="fl-title">Investigation path: ticket, then site, then KPI trend, then outages and changes, then action</title>
+      <defs><marker id="fl-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" class="fl-ah"/></marker></defs>
+      <g><rect x="10" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="85.0" y="55" text-anchor="middle" class="fl-t">Ticket</text><text x="85.0" y="100" text-anchor="middle" class="fl-n">01</text></g><path d="M164 50 H188" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="194" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="269.0" y="55" text-anchor="middle" class="fl-t">Site</text><text x="269.0" y="100" text-anchor="middle" class="fl-n">02</text></g><path d="M348 50 H372" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="378" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="453.0" y="55" text-anchor="middle" class="fl-t">KPI trend</text><text x="453.0" y="100" text-anchor="middle" class="fl-n">03</text></g><path d="M532 50 H556" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="562" y="22" width="150" height="56" rx="10" class="fl-box"/><text x="637.0" y="55" text-anchor="middle" class="fl-t">Outages &amp; changes</text><text x="637.0" y="100" text-anchor="middle" class="fl-n">04</text></g><path d="M716 50 H740" class="fl-a" marker-end="url(#fl-arr)"/><g><rect x="746" y="22" width="150" height="56" rx="10" class="fl-box fl-end"/><text x="821.0" y="55" text-anchor="middle" class="fl-t">Action</text><text x="821.0" y="100" text-anchor="middle" class="fl-n">05</text></g>
+    </svg>
+    <figcaption>The path engineers already followed on every ticket. The redesign keeps each step one click from the last, instead of one tool per step.</figcaption>
+  </figure>
   <figure class="demo">
     <div class="screen">
       <div class="compare" id="compare" style="--x:50%">
         <div class="layer before" aria-hidden="true">
           <div class="btns"><span>Export</span><span>Refresh</span><span>Filter</span><span>Columns</span><span>Reset</span><span>Help</span><span>Settings</span></div>
           <table>
-            <tr><th>ID</th><th>Site</th><th>Type</th><th>Status</th><th>Updated</th><th>Owner</th><th>Region</th></tr>
-            <tr><td>48211</td><td>DAL-04</td><td>ETL</td><td>RUNNING</td><td>10:42</td><td>j.ortiz</td><td>N</td></tr>
-            <tr><td>48212</td><td>AUS-11</td><td>ETL</td><td>FAILED</td><td>10:39</td><td>m.chen</td><td>C</td></tr>
-            <tr><td>48213</td><td>HOU-02</td><td>WF</td><td>RUNNING</td><td>10:37</td><td>a.patel</td><td>S</td></tr>
-            <tr><td>48214</td><td>DAL-09</td><td>WF</td><td>DELAYED</td><td>10:31</td><td>j.ortiz</td><td>N</td></tr>
-            <tr><td>48215</td><td>SAT-01</td><td>ETL</td><td>RUNNING</td><td>10:30</td><td>r.kim</td><td>S</td></tr>
-            <tr><td>48216</td><td>ELP-03</td><td>WF</td><td>RUNNING</td><td>10:28</td><td>l.nguyen</td><td>W</td></tr>
-            <tr><td>48217</td><td>LBB-02</td><td>ETL</td><td>RUNNING</td><td>10:26</td><td>m.chen</td><td>W</td></tr>
+            <tr><th>Site</th><th>Sector</th><th>Band</th><th>Access %</th><th>Drop %</th><th>PRB %</th><th>Market</th></tr>
+            <tr><td>DAL0398</td><td>1</td><td>B66</td><td>99.4</td><td>0.6</td><td>51</td><td>DAL</td></tr>
+            <tr><td>AUS0119</td><td>2</td><td>B2</td><td>0.0</td><td>0.0</td><td>0</td><td>AUS</td></tr>
+            <tr><td>HOU0087</td><td>3</td><td>n77</td><td>99.3</td><td>0.7</td><td>34</td><td>HOU</td></tr>
+            <tr><td>DAL0412</td><td>2</td><td>B66</td><td>98.9</td><td>2.4</td><td>55</td><td>DAL</td></tr>
+            <tr><td>SAT0021</td><td>1</td><td>B66</td><td>99.5</td><td>0.5</td><td>48</td><td>SAT</td></tr>
+            <tr><td>ELP0033</td><td>3</td><td>B2</td><td>99.2</td><td>0.6</td><td>62</td><td>ELP</td></tr>
+            <tr><td>LBB0012</td><td>2</td><td>n77</td><td>99.4</td><td>0.5</td><td>29</td><td>LBB</td></tr>
           </table>
         </div>
         <div class="layer after" aria-hidden="true">
           <div class="after-ui">
-            <aside><span class="on">Jobs</span><span>Workflows</span><span>Topics</span><span>Sites</span><span>Map</span></aside>
-            <main>
-              <div class="kpis"><div class="kpi"><small>Running</small><b>142</b></div><div class="kpi"><small>Delayed</small><b style="color:var(--s-warn)">6</b></div><div class="kpi"><small>Failed</small><b style="color:var(--s-bad)">2</b></div></div>
-              <div class="search">⌕ Search jobs, sites, owners <span class="pill" style="margin-left:auto">Needs attention</span></div>
+            <aside><span class="on">Overview</span><span>Sites</span><span>KPIs</span><span>Outages</span><span>Map</span></aside>
+            <div class="after-main">
+              <div class="kpis"><div class="kpi"><small>Healthy</small><b>1,962</b></div><div class="kpi"><small>Degraded</small><b style="color:var(--s-warn)">31</b></div><div class="kpi"><small>Down</small><b style="color:var(--s-bad)">4</b></div></div>
+              <div class="search">⌕ Search sites, markets, tickets <span class="pill" style="margin-left:auto">Needs attention</span></div>
               <div class="rows">
-                <div class="row"><i class="dot d-bad"></i><span>ETL · AUS-11 · m.chen</span><span class="pill">Failed 3m</span></div>
-                <div class="row"><i class="dot d-warn"></i><span>Workflow · DAL-09 · j.ortiz</span><span class="pill">Delayed 11m</span></div>
-                <div class="row"><i class="dot d-ok"></i><span>ETL · DAL-04 · j.ortiz</span><span class="pill">Running</span></div>
+                <div class="row"><i class="dot d-bad"></i><span>AUS0119 · all sectors · Austin</span><span class="pill">Site down 3h</span></div>
+                <div class="row"><i class="dot d-warn"></i><span>DAL0412 · Sector 2 · LTE B66</span><span class="pill">Drops 2.4% ↑</span></div>
+                <div class="row"><i class="dot d-ok"></i><span>HOU0087 · Sector 3 · 5G n77</span><span class="pill">Normal</span></div>
               </div>
-            </main>
+            </div>
           </div>
         </div>
         <div class="handle"></div>
@@ -869,11 +986,11 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   <div class="prose">
     <h2><i class="hd hd-p"></i>Design decisions</h2>
     <ul>
-      <li><b>Simpler, not more.</b> I removed duplicate screens and patterns instead of adding new ones; the result was 25% less UI code.</li>
-      <li><b>Status first.</b> A colored dot and short label on every row, so problems stand out before you read.</li>
-      <li><b>Summary before detail.</b> Three key numbers on top, the list below, sorted by urgency.</li>
-      <li><b>Fewer steps.</b> Search and filters on the same screen as the list.</li>
-      <li><b>One pattern everywhere.</b> The same navigation and table behavior on every page.</li>
+      <li><b>Simplicity: fewer screens, not more.</b> I removed duplicate screens and patterns instead of adding new ones; the result was 25% less UI code.</li>
+      <li><b>Color meaning: status first.</b> A colored dot and a short label on every row, so problems stand out before you read. Color always comes with a word, never alone.</li>
+      <li><b>Visual hierarchy: summary before detail.</b> Three numbers for the whole market on top, then only the sites that need attention, sorted by urgency.</li>
+      <li><b>Layout: fewer steps.</b> Search, filters and the KPI trend on the same screen as the list, so a ticket no longer means opening four tools.</li>
+      <li><b>Consistency: one pattern everywhere.</b> The same navigation and table behavior on every page, so engineers learn it once.</li>
     </ul>
     <h2><i class="hd hd-e"></i>A shared component library</h2>
     <p>I built the UI on Material UI with one theme for color, type and spacing, and a small set of components on top. Status colors are reserved for state; the accent is only for actions. Every new page now looks and behaves the same without extra work.</p>
@@ -881,9 +998,9 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   <figure class="demo">
     <div class="ds">
       <div class="ds-card">
-        <div class="specimen"><span class="m-btn m-contained">Retry job</span><span class="m-btn m-outlined">View logs</span><span class="m-btn m-text">Cancel</span></div>
-        <div class="specimen"><span class="m-chip"><i class="dot d-ok"></i>Running</span><span class="m-chip"><i class="dot d-warn"></i>Delayed</span><span class="m-chip"><i class="dot d-bad"></i>Failed</span></div>
-        <div class="m-toast"><i class="dot d-ok"></i>Job restarted on AUS-11</div>
+        <div class="specimen"><span class="m-btn m-contained">Open ticket</span><span class="m-btn m-outlined">View KPI trend</span><span class="m-btn m-text">Cancel</span></div>
+        <div class="specimen"><span class="m-chip"><i class="dot d-ok"></i>Healthy</span><span class="m-chip"><i class="dot d-warn"></i>Degraded</span><span class="m-chip"><i class="dot d-bad"></i>Down</span></div>
+        <div class="m-toast"><i class="dot d-ok"></i>Ticket created for AUS0119</div>
       </div>
 <pre class="code"><span class="k">export const</span> theme = createTheme({
   palette: {
@@ -900,30 +1017,44 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   </figure>
   <div class="prose">
     <h2><i class="hd hd-c"></i>After launch</h2>
-    <p>I kept listening after release. Users found some things hard to find, so I reworked navigation and filters. Some screens showed too much at once, so I simplified them. A few views were slow, so I fixed them.</p>
+    <p>I kept listening after release. Engineers found some filters hard to find, so I reworked navigation and filters. Some screens showed every sector and carrier at once, so I simplified them to show what needs attention first. A few views were slow, so I fixed them.</p>
     <h2><i class="hd hd-p"></i>Results</h2>
     <ul>
       <li>25% less duplicated UI code.</li>
-      <li>Fewer clicks and screens for common tasks.</li>
-      <li>Fewer bugs and support tickets, and positive feedback from users and the client.</li>
-      <li>Best Deliverables recognition.</li>
+      <li>Fewer clicks and screens to get from a ticket to the KPI evidence.</li>
+      <li>Fewer bugs and support tickets, and positive feedback from engineers and client stakeholders.</li>
+      <li>20+ features and modules delivered since 2024, and Best Deliverables recognition.</li>
     </ul>
     <h2><i class="hd hd-p"></i>What I learned</h2>
     <p>The simplest version that solves the problem is usually the right one: it is easier to learn, easier to change and has fewer bugs. Showing users a working build gets better feedback than describing it. And launch is the middle of the project: the biggest improvements came from what users told me after release.</p>
   </div>
-  <a class="next" href="#maps">Next: WebGL maps and live data →</a>
+  <a class="next" href="#maps">Next: Map-based KPI analysis →</a>
 </article>
 
 <!-- ================= MAPS ================= -->
 <article id="v-maps" class="view cs" hidden>
   <a class="back" href="#home">← All work</a>
   <header class="cs-head">
-    <h1>Mapping thousands of network sites with WebGL, and showing where data is stuck</h1>
-    <dl class="facts"><div><dt>Company</dt><dd>Verizon, via Incedo</dd></div><div><dt>Role</dt><dd>Design and build</dd></div><div><dt>Stack</dt><dd>WebGL, React, GeoServer, Kafka</dd></div><div><dt>Result</dt><dd>20% better reliability</dd></div></dl>
+    <h1>Letting engineers analyze any part of the network by drawing on a map</h1>
+    <dl class="facts"><div><dt>Client</dt><dd>National wireless carrier, via Incedo</dd></div><div><dt>Role</dt><dd>Design and build</dd></div><div><dt>Stack</dt><dd>WebGL, GeoJSON/KML, GeoServer, Python, Kafka</dd></div><div><dt>Result</dt><dd>~50% less troubleshooting time</dd></div></dl>
     <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
-    <p class="intro">Ops teams needed to see where things were happening, not read a list. I built map views that render large numbers of site markers smoothly with WebGL, GIS diff maps that show what changed between data loads, and a live view of how data moves through the system.</p>
+    <p class="intro">Network problems are local: a stadium on game day, a storm path, a new neighborhood, a market boundary. But the data lived in tables. To study an area, engineers exported site lists, matched them to KPIs in spreadsheets, and rebuilt the same report next time. I built map tools that turn that into a few clicks.</p>
+    <h2><i class="hd hd-c"></i>The pain points</h2>
+    <ul>
+      <li>Answering "how is this area doing?" took hours of exports and spreadsheet work.</li>
+      <li>Thousands of site markers made the old map slow, so people stopped using it.</li>
+      <li>There was no easy way to see what changed in coverage between data loads.</li>
+    </ul>
+    <h2><i class="hd hd-e"></i>What I built</h2>
+    <ul>
+      <li><b>Draw-a-polygon analysis.</b> Draw one or more areas and get KPI trends and a site list for everything inside, ready to export.</li>
+      <li><b>Reusable areas.</b> Market boundary editing, saved geofences and cell groups engineers can come back to.</li>
+      <li><b>Fast rendering.</b> WebGL keeps thousands of sites smooth while panning and zooming.</li>
+      <li><b>Coverage diff.</b> GIS layers that show sites and coverage added or removed between data loads.</li>
+      <li><b>Clean inputs.</b> Python and Airflow pipelines that load GeoJSON, KML and county boundary data from several sources.</li>
+    </ul>
     <h2><i class="hd hd-p"></i>The map</h2>
     <p>The land is a quiet dot grid so the markers carry the color. Color only means state: green healthy, amber warning, red pulsing for trouble. One toggle switches from live status to what changed.</p>
   </div>
@@ -953,9 +1084,9 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   </figure>
   <div class="prose">
     <h2><i class="hd hd-e"></i>Behind the map</h2>
-    <p>I integrated GeoServer for the GIS diff maps and wrote Python scripts that ingest and standardize county boundary data from several sources.</p>
+    <p>GeoServer serves the coverage diff layers, and the Python ingest pipelines standardize boundary and site data so every layer lines up on the same map.</p>
     <h2><i class="hd hd-e"></i>Live data flow</h2>
-    <p>Kafka metrics lived in tables and graphs, so the whole path a message takes was hard to see. I built reusable React components that draw topic flows in real time. Moving lines mean live data; a stalled path stops moving and turns red.</p>
+    <p>When a KPI or alarm feed fell behind, engineers saw stale data on the map without knowing why. Kafka metrics lived in tables and graphs, so the whole path a message takes was hard to see. I built reusable React components that draw topic flows in real time. Moving lines mean live data; a stalled path stops moving and turns red.</p>
   </div>
   <figure class="demo">
     <div class="screen flow">
@@ -978,15 +1109,15 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
           <path class="live" d="M395 155 C450 155 460 175 510 175" stroke="#4cc38a"/>
         </g>
         <g font-size="11">
-          <rect x="30" y="39" width="120" height="32" rx="6" fill="#171f37"/><text x="42" y="59" fill="#e7ebf7">checkout-api</text>
-          <rect x="30" y="99" width="120" height="32" rx="6" fill="#171f37"/><text x="42" y="119" fill="#e7ebf7">billing-svc</text>
-          <rect x="30" y="159" width="120" height="32" rx="6" fill="#171f37"/><text x="42" y="179" fill="#e7ebf7">usage-collector</text>
-          <rect x="275" y="57" width="120" height="36" rx="18" fill="#222b49"/><text x="291" y="79" fill="#e7ebf7">orders.events</text>
-          <rect x="275" y="137" width="120" height="36" rx="18" fill="#222b49"/><text x="291" y="159" fill="#e7ebf7">usage.raw</text>
-          <rect x="510" y="39" width="120" height="32" rx="6" fill="#171f37"/><text x="522" y="59" fill="#e7ebf7">fulfillment</text>
-          <rect id="badnode" x="510" y="99" width="120" height="32" rx="6" fill="#3a1f27" stroke="#f07a72"/><text x="522" y="119" fill="#e7ebf7">billing-sync</text>
+          <rect x="30" y="39" width="120" height="32" rx="6" fill="#171f37"/><text x="42" y="59" fill="#e7ebf7">kpi-ingest</text>
+          <rect x="30" y="99" width="120" height="32" rx="6" fill="#171f37"/><text x="42" y="119" fill="#e7ebf7">alarm-feed</text>
+          <rect x="30" y="159" width="120" height="32" rx="6" fill="#171f37"/><text x="42" y="179" fill="#e7ebf7">outage-feed</text>
+          <rect x="275" y="57" width="120" height="36" rx="18" fill="#222b49"/><text x="291" y="79" fill="#e7ebf7">network.events</text>
+          <rect x="275" y="137" width="120" height="36" rx="18" fill="#222b49"/><text x="291" y="159" fill="#e7ebf7">kpi.hourly</text>
+          <rect x="510" y="39" width="120" height="32" rx="6" fill="#171f37"/><text x="522" y="59" fill="#e7ebf7">map-layers</text>
+          <rect id="badnode" x="510" y="99" width="120" height="32" rx="6" fill="#3a1f27" stroke="#f07a72"/><text x="522" y="119" fill="#e7ebf7">ticket-sync</text>
           <text id="badlabel" x="522" y="148" fill="#f07a72">lag 48k ↑</text>
-          <rect x="510" y="159" width="120" height="32" rx="6" fill="#171f37"/><text x="522" y="179" fill="#e7ebf7">analytics</text>
+          <rect x="510" y="159" width="120" height="32" rx="6" fill="#171f37"/><text x="522" y="179" fill="#e7ebf7">kpi-rollups</text>
         </g>
       </svg>
       </div>
@@ -994,33 +1125,46 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
   </figure>
   <div class="prose">
     <h2><i class="hd hd-p"></i>Results</h2>
-    <p>Together with Grafana dashboards for lag, throughput and broker health, faster root-cause diagnosis improved system reliability by 20%.</p>
+    <p>Engineers spend about <b>50% less time</b> on troubleshooting and area reports, because a map selection replaced manual exports and spreadsheet joins. Separately, the live flow views and Grafana dashboards for lag, throughput and broker health sped up diagnosis of data delays and improved system reliability by 20%.</p>
     <h2><i class="hd hd-p"></i>What I learned</h2>
-    <p>On a map, color is the loudest thing on screen, so it should mean only one thing. And performance is part of the design: if panning stutters, people stop exploring.</p>
+    <p>On a map, color is the loudest thing on screen, so it should mean only one thing. Performance is part of the design: if panning stutters, people stop exploring. And the most valuable feature was the one that took a spreadsheet out of someone's day.</p>
   </div>
-  <a class="next" href="#ai-assistant">Next: AI root-cause assistant →</a>
+  <a class="next" href="#ai-assistant">Next: AI assistant for network triage →</a>
 </article>
 
 <!-- ================= AI ================= -->
 <article id="v-ai-assistant" class="view cs" hidden>
   <a class="back" href="#home">← All work</a>
   <header class="cs-head">
-    <h1>Turning a reporting dashboard into an assistant that suggests what to do next</h1>
-    <dl class="facts"><div><dt>Company</dt><dd>Verizon, via Incedo</dd></div><div><dt>Role</dt><dd>Concept, design, build, demo</dd></div><div><dt>Stack</dt><dd>Gemini API, React</dd></div><div><dt>Audience</dt><dd>Client stakeholders</dd></div></dl>
+    <h1>An AI assistant that helps network engineers decide what to fix first</h1>
+    <dl class="facts"><div><dt>Client</dt><dd>National wireless carrier, via Incedo</dd></div><div><dt>Role</dt><dd>Concept, design, build, pilot</dd></div><div><dt>Stack</dt><dd>Gemini API, React, prompt design</dd></div><div><dt>Status</dt><dd>Piloted with engineers</dd></div></dl>
     <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
-    <p class="intro">The platform showed plenty of data but left the diagnosis to people. When something broke, operators pieced together the cause from several dashboards. I designed and built a working GenAI prototype that explains the likely cause and suggests next steps, and presented it directly to the client.</p>
+    <p class="intro">The platform had plenty of data but left the diagnosis to people. For every ticket, engineers checked KPI trends, alarms, outages and recent changes, then decided on a cause and a fix. Experienced engineers did this quickly; newer ones took much longer. I designed and built a generative AI assistant that does the first pass and shows its evidence, demoed it to client leadership, and piloted it with engineers.</p>
+    <h2><i class="hd hd-c"></i>The pain points</h2>
+    <ul>
+      <li>The quality and speed of a diagnosis depended on who picked up the ticket.</li>
+      <li>Engineers repeated the same checks across several screens for every ticket.</li>
+      <li>With a long queue, it wasn't obvious which ticket to work first.</li>
+    </ul>
+    <h2><i class="hd hd-e"></i>How I built it</h2>
+    <ol>
+      <li><b>Captured the reasoning.</b> Senior engineers talked me through real tickets, and I turned their checks into the steps the assistant follows.</li>
+      <li><b>Grounded it in real data.</b> The prompt carries the site's KPIs, alarm history, outages and open tickets, so answers point to evidence instead of guessing.</li>
+      <li><b>Asked for structure, not essays.</b> Likely cause, next steps, confidence and ticket priority come back as separate fields, so the interface can show each one clearly.</li>
+      <li><b>Piloted and adjusted.</b> Engineers used it on real tickets; I changed wording, steps and what evidence it shows based on their feedback.</li>
+    </ol>
   </div>
   <figure class="demo">
     <div class="screen">
       <div class="screen-bar"><span class="tag">Prototype · sample data</span><span class="acts"><span class="ai-badge" id="runmode">Replay</span><button class="sbtn primary" type="button" id="run">Run analysis</button></span></div>
       <div class="assist">
         <div class="alert">
-          <span class="pill" style="justify-self:start;color:var(--s-bad)">Incident · 10:42</span>
-          <h4>Consumer lag rising on orders.events</h4>
-          <p>Lag up from 1.2k to 48k messages in 9 minutes.</p>
-          <svg class="spark" viewBox="0 0 300 70" preserveAspectRatio="none" aria-label="Lag rising sharply">
+          <span class="pill" style="justify-self:start;color:var(--s-bad)">Ticket · DAL0412 · 10:42</span>
+          <h3>Drop rate rising on DAL0412, Sector 2 (LTE B66)</h3>
+          <p>Dropped calls up from 0.6% to 2.4% over two days.</p>
+          <svg class="spark" viewBox="0 0 300 70" preserveAspectRatio="none" aria-label="Drop rate rising sharply">
             <path d="M0 62 L40 61 L80 60 L120 59 L160 56 L190 48 L220 36 L250 22 L280 12 L300 8 L300 70 L0 70Z" fill="#f07a72" fill-opacity=".16"/>
             <path d="M0 62 L40 61 L80 60 L120 59 L160 56 L190 48 L220 36 L250 22 L280 12 L300 8" fill="none" stroke="#f07a72" stroke-width="2"/>
             <circle cx="297" cy="8" r="3.5" fill="#f07a72"/>
@@ -1028,10 +1172,10 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
         </div>
         <div class="rec" aria-live="polite">
           <span class="thinking" id="thinking">Checked 3 sources</span>
-          <h4 id="cause">Likely cause: a consumer group lost two instances after a deploy</h4>
-          <ol id="steps"><li>Check the health of the billing-sync consumer group.</li><li>Roll back release 3.14.2 if instances don't recover.</li><li>Notify the on-call owner for billing-sync.</li></ol>
+          <h3 id="cause">Likely cause: a handover setting changed on this sector the day the drops began</h3>
+          <ol id="steps"><li>Compare handover success with the neighboring sectors.</li><li>Roll back the handover offset change if drops don't recover within 24 hours.</li><li>Assign the ticket to RF optimization as priority 2.</li></ol>
           <div class="conf">Confidence<span class="bar"><i id="confbar"></i></span><span id="confnum">78%</span></div>
-          <div class="src"><span class="pill">Grafana · consumer lag</span><span class="pill">Deploy log</span><span class="pill">Broker health</span></div>
+          <div class="src"><span class="pill">KPI trend · drop rate</span><span class="pill">Change log</span><span class="pill">Alarm history</span></div>
         </div>
       </div>
     </div>
@@ -1049,113 +1193,75 @@ body.lens-engineer .wmeta .sub{font-family:var(--f-mono);font-size:.84rem}
       <li><b>Fail gracefully.</b> If AI isn't available, fall back to something useful. The "Ask about my work" box on my home page works the same way.</li>
     </ul>
     <h2><i class="hd hd-e"></i>Also built</h2>
-    <p>An AI step in code review: Gemini prompts that flag code smells, vulnerabilities and standards issues before merge, which reduced defects. I use Claude, GitHub Copilot and Gemini every day to explore ideas, prototype and review code.</p>
+    <p><b>Agentic development.</b> Claude Code subagents critique requirements, plan and implement changes, and Playwright tests check each one before review, which roughly doubled my delivery speed without lowering quality. <b>AI in code review.</b> Gemini prompts flag code smells, vulnerabilities and standards issues before merge, which reduced defects.</p>
     <h2><i class="hd hd-p"></i>What I learned</h2>
-    <p>Stakeholders understood the idea in minutes once they could see it working. A working prototype answers questions a slide deck only raises.</p>
+    <p>Stakeholders understood the idea in minutes once they could see it working; a working prototype answers questions a slide deck only raises. The pilot taught me even more: engineers trusted a suggestion once they could see which data it came from, so evidence matters more than eloquence.</p>
   </div>
-  <a class="next" href="#subscriptions">Next: Subscription dashboard →</a>
+  <a class="next" href="#tv-concept">Next: Venue display concept →</a>
 </article>
 
-<!-- ================= T-MOBILE ================= -->
-<article id="v-subscriptions" class="view cs" hidden>
+<!-- ================= VENUE TV CONCEPT ================= -->
+<article id="v-tv-concept" class="view cs" hidden>
   <a class="back" href="#home">← All work</a>
   <header class="cs-head">
-    <h1>A subscription dashboard people can read at a glance, on any screen</h1>
-    <dl class="facts"><div><dt>Company</dt><dd>T-Mobile</dd></div><div><dt>Role</dt><dd>Front end and services</dd></div><div><dt>Stack</dt><dd>React, Redux, Jest, Spring Boot</dd></div><div><dt>Result</dt><dd>40% higher user satisfaction</dd></div></dl>
+    <h1>Designing a shared screen people glance at from a distance, and the app owners use to run it</h1>
+    <dl class="facts"><div><dt>Type</dt><dd>Concept project, 2026</dd></div><div><dt>Role</dt><dd>Problem framing, UX, UI, code</dd></div><div><dt>Stack</dt><dd>Vue 3, TypeScript, Vite</dd></div><div><dt>Try it</dt><dd><a href="concept/venue-tv/" target="_blank" rel="noopener">Live demo ↗</a></dd></div></dl>
+    <div class="legend-key"><span><i class="t-e"></i>Engineering</span><span><i class="t-c"></i>Customers</span><span><i class="t-p"></i>Product</span></div>
   </header>
   <div class="prose">
-    <p class="intro">Customers used the subscription dashboard to manage plans, check usage and handle billing. I designed and built its front-end components in React and Redux, with responsiveness and accessibility as the priority, and built the services behind them.</p>
-    <h2><i class="hd hd-c"></i>The problem</h2>
-    <p>The dashboard had to work just as well on a phone as on a desktop, and be usable by everyone, including people using a keyboard or screen reader.</p>
-    <h2><i class="hd hd-e"></i>What I did</h2>
+    <p class="intro">Most of my work is tools people use up close. I wanted to design the opposite: a screen in a gym, café or waiting room that people glance at from ten feet away, rarely touch and often can't hear, plus the web app a business owner uses to keep every screen running. This is a self-initiated concept; the venue, channels and content are invented.</p>
+    <h2><i class="hd hd-c"></i>The problem, from three sides</h2>
     <ul>
-      <li>Designed and built the dashboard's front-end components in React and Redux, validated with Jest unit tests.</li>
-      <li>Worked with product managers and QA in Agile sprints to turn requirements into designs, and led code reviews.</li>
-      <li>Built the Spring Boot services for subscription activation, usage tracking and billing, with Kafka for real-time activity and notifications.</li>
+      <li><b>Viewers glance, they don't browse.</b> The screen has to make sense in two seconds, from across a room, usually with the sound off.</li>
+      <li><b>Owners only look when something is wrong.</b> They don't think about their TVs until one goes dark or shows the wrong thing.</li>
+      <li><b>Staff have a remote and no training.</b> Whoever is at the front desk may need to change a channel in a few presses.</li>
+    </ul>
+    <h2><i class="hd hd-p"></i>Constraints I designed for</h2>
+    <ul>
+      <li><b>Readable at distance.</b> On a 1920 × 1080 stage, nothing is smaller than 26px, body text is 32px and titles are 72 to 76px.</li>
+      <li><b>Remote only.</b> Every action works with arrow keys, OK and Back. Focus is a thick white outline plus a slight scale, so it's obvious from a couch.</li>
+      <li><b>Safe areas.</b> All text sits inside a 5% margin, because many TVs crop the edges. A toggle shows the boundary.</li>
+      <li><b>Sound off by default.</b> Captions are on, because most venues play TVs muted.</li>
+      <li><b>Nobody touching it.</b> The screen rests in a quiet watch mode. Browse opens on any remote press and closes itself after a short idle period.</li>
     </ul>
   </div>
   <figure class="demo">
-    <div class="screen">
-      <div class="screen-bar"><span class="tag">Pattern · sample data · brand styling removed</span>
-        <div class="seg" role="group" aria-label="Screen size"><button type="button" data-size="desk" aria-pressed="true">Desktop</button><button type="button" data-size="phone" aria-pressed="false">Phone</button></div></div>
-      <div class="subdemo-wrap"><div class="subdemo" id="subdemo">
-        <div class="sd-head"><div><small>Account</small><b>Your plan · 3 lines</b></div><button type="button" class="sbtn primary">Change plan</button></div>
-        <div class="sd-grid">
-          <div class="sd-card"><small>Data</small><b>12.4 of 20 GB</b><span class="meter"><i style="width:62%"></i></span><small>Resets in 9 days</small></div>
-          <div class="sd-card"><small>Next bill</small><b>Due Oct 14</b><span class="meter"><i style="width:30%;background:var(--s-ok)"></i></span><small>Autopay on</small></div>
-          <div class="sd-card"><small>Lines</small><b>3 active</b><div class="sd-lines"><span><i class="dot d-ok"></i>Line 1</span><span><i class="dot d-ok"></i>Line 2</span><span><i class="dot d-warn"></i>Line 3 · near limit</span></div></div>
-        </div>
-      </div></div>
-    </div>
-    <figcaption>Switch between desktop and phone. A pattern recreated with sample data, not the real product.</figcaption>
+    <iframe class="cs-embed" src="concept/venue-tv/index.html?embed=1" title="Venue display concept: live demo" loading="lazy"></iframe>
+    <p class="embed-fallback"><a class="btn btn-primary" href="concept/venue-tv/" target="_blank" rel="noopener">Open the live demo ↗</a></p>
+    <figcaption>Live demo. Click the TV and use your arrow keys, Enter and Esc, or change a channel in the owner app and watch the TV follow. <a href="concept/venue-tv/" target="_blank" rel="noopener">Open full screen ↗</a></figcaption>
   </figure>
   <div class="prose">
     <h2><i class="hd hd-p"></i>Design decisions</h2>
     <ul>
-      <li><b>Usage first.</b> What people check most sits at the top, as a number and a bar.</li>
-      <li><b>One layout, every screen.</b> Cards reflow from three columns to one without hiding anything.</li>
-      <li><b>Warnings in words, not just color.</b> "Near limit" is written out, so it doesn't rely on color alone.</li>
+      <li><b>Two modes, not one busy screen.</b> Watch mode shows the content, a lower third and captions. Browse mode is a dark overlay with now playing, up next, channels and settings.</li>
+      <li><b>Focus memory.</b> Each row remembers where you were, so moving down and back up returns you to the same tile. With a remote, every extra press costs patience.</li>
+      <li><b>Problems first in the owner app.</b> Offline screens and pending updates sit at the top with a plain-language cause and one action: Restart remotely or Install now.</li>
+      <li><b>Status in words, not only color.</b> Every dot has a label (Playing, Offline, Update ready), for quick scanning and for color-blind owners.</li>
+      <li><b>One source of truth.</b> The TV and the app share one store, so a channel change in either place shows up in the other right away, the way a real device picks up a new playlist.</li>
     </ul>
-    <h2><i class="hd hd-p"></i>Results</h2>
-    <p>User satisfaction rose 40% through better responsiveness and accessibility. On the services side, query optimization and schema changes cut query time by 20%.</p>
-  </div>
-  <a class="next" href="#shop">Next: Shop flows for prepaid brands →</a>
-</article>
-
-<!-- ================= TRACFONE ================= -->
-<article id="v-shop" class="view cs" hidden>
-  <a class="back" href="#home">← All work</a>
-  <header class="cs-head">
-    <h1>Shop flows for a family of prepaid brands</h1>
-    <dl class="facts"><div><dt>Company</dt><dd>TracFone Wireless</dd></div><div><dt>Brands</dt><dd>Straight Talk, TracFone and others</dd></div><div><dt>Stack</dt><dd>Java, Spring, REST/SOAP, SQL</dd></div><div><dt>Result</dt><dd>30% faster queries</dd></div></dl>
-  </header>
-  <div class="prose">
-    <p class="intro">TracFone runs several prepaid brands, including Straight Talk, for both consumers and business customers. I worked on the shop flows customers use to pick a phone and a plan, and on the services behind them.</p>
-    <h2><i class="hd hd-c"></i>The challenge</h2>
-    <p>Several brands and customer types, B2B and B2C, share the same underlying flow. Each change had to work for all of them.</p>
-    <h2><i class="hd hd-e"></i>What I did</h2>
+    <h2><i class="hd hd-e"></i>How I built it</h2>
+    <p>Vue 3 single-file components in TypeScript (strict mode), built with Vite. A small composable, <code>useRemoteNav</code>, handles D-pad movement and focus memory. The TV is drawn on a fixed 1920 × 1080 stage and scaled to fit, so type sizes are real TV pixels. Program art is generated SVG instead of video, so the concept uses no real footage or brands. I built it with AI coding assistance, then reviewed the code and tested every interaction by keyboard, at phone width and in an automated browser.</p>
+    <h2><i class="hd hd-p"></i>What I would measure if it shipped</h2>
     <ul>
-      <li>Worked on shop flows for Straight Talk, TracFone and their other B2B and B2C brands.</li>
-      <li>Built Spring MVC applications with SOAP and REST services, and turned 20+ user stories into system designs with a Scrum team.</li>
-      <li>Rewrote slow SQL queries after analyzing execution plans, and added 100+ unit tests with JUnit and Mockito.</li>
-      <li>Streamlined CI/CD with Jenkins and Docker.</li>
-    </ul>
-  </div>
-  <figure class="demo">
-    <div class="screen">
-      <div class="screen-bar"><span class="tag">Pattern · sample data · brand styling removed</span><span class="ai-badge" id="shopstep">Step 1 of 3</span></div>
-      <div class="shopdemo" id="shopdemo">
-        <ol class="sh-prog"><li class="on">Phone</li><li>Plan</li><li>Review</li></ol>
-        <div class="sh-panel" data-step="0">
-          <div class="sh-opts"><button type="button" class="opt pick">Bring my own phone</button><button type="button" class="opt">Buy a new phone</button></div>
-        </div>
-        <div class="sh-panel" data-step="1" hidden>
-          <div class="sh-opts"><button type="button" class="opt">Basic</button><button type="button" class="opt pick">Unlimited</button><button type="button" class="opt">Family</button></div>
-        </div>
-        <div class="sh-panel" data-step="2" hidden>
-          <div class="sh-review"><span>Phone</span><b id="rv-phone">Bring my own phone</b><span>Plan</span><b id="rv-plan">Unlimited</b></div>
-        </div>
-        <div class="sh-nav"><button type="button" class="sbtn" id="shback" disabled>Back</button><button type="button" class="sbtn primary" id="shnext">Continue</button></div>
-      </div>
-    </div>
-    <figcaption>Click through the steps. A generic pattern with brand styling removed, not the real site.</figcaption>
-  </figure>
-  <div class="prose">
-    <h2><i class="hd hd-p"></i>Results</h2>
-    <ul>
-      <li>30% better database efficiency from rewriting slow queries.</li>
-      <li>30% fewer post-deployment issues after adding thorough tests.</li>
-      <li>95% on-time delivery for key features, with 10% faster deployments.</li>
+      <li>Time from a screen going offline to the owner fixing it.</li>
+      <li>How often staff open browse mode, and whether they reach a channel in three presses or fewer.</li>
+      <li>Captions on versus off by venue type, to set better defaults.</li>
     </ul>
     <h2><i class="hd hd-p"></i>What I learned</h2>
-    <p>When one flow serves many brands, the shared parts have to be solid and the brand-specific parts have to be easy to change. That idea shaped how I build component libraries today.</p>
+    <p>Designing for distance means designing with fewer choices: one clear action at a time, bigger everything, and a screen that's useful even when nobody touches it. The owner app taught the same lesson from the other side: the best dashboard is the one you only need when something's wrong.</p>
   </div>
   <a class="next" href="#home">← Back to all work</a>
 </article>
 
+<!-- ================= T-MOBILE ================= -->
+
+<!-- ================= TRACFONE ================= -->
+
+
+</main>
 
 <nav class="dock" id="dock" aria-label="Quick contact"><a href="Anusha_Anumula_Resume.pdf" target="_blank" rel="noopener">Resume</a><a href="https://www.linkedin.com/in/anusha15/" target="_blank" rel="noopener">LinkedIn</a><button type="button" id="dockmail">Copy email</button></nav>
-<footer>Screens are recreated with sample data to protect client confidentiality. Built by hand in HTML, CSS, JavaScript and WebGL.</footer>
+<footer>Screens are recreated with sample data to protect client confidentiality. Built by hand in HTML, CSS, JavaScript and WebGL; the venue display concept is built with Vue and TypeScript.</footer>
 </div>
 
 <script>
@@ -1181,15 +1287,15 @@ function typeOut(el,str,done,signal){ if(reduce){el.textContent=str;return done&
   (function t(){ if(signal&&signal.aborted){car.remove();return;} if(n<=str.length){el.textContent=str.slice(0,n);el.appendChild(car);n+=3;setTimeout(t,14);} else {car.remove();el.textContent=str;done&&done();}})();}
 
 /* ---------- AI root-cause assistant ---------- */
-var INCIDENT='Incident data (sample):\n- Alert: consumer lag on topic orders.events rose from 1,200 to 48,000 messages in 9 minutes, starting 10:33.\n- Grafana: consumer group billing-sync instances went from 4 to 2 at 10:31. Other consumer groups normal.\n- Deploy log: release 3.14.2 of billing-sync deployed 10:30.\n- Broker health: all 3 brokers healthy, disk 41%, no under-replicated partitions.\n';
+var INCIDENT='Ticket data (sample):\n- Ticket: dropped-call rate on site DAL0412, Sector 2, LTE band B66 rose from 0.6% to 2.4% over the last two days.\n- KPI trend: accessibility and resource utilization on the sector are normal; neighboring sectors are normal.\n- Change log: the handover offset parameter on this sector was changed from 3 to -2 two days ago by an automation job.\n- Alarm history: no hardware or power alarms on the site; no outages in the last 7 days.\n';
 var running=false,runModeEl=document.getElementById('runmode');
 samplePromise.then(function(s){ if(s){runModeEl.textContent='Live AI';} });
 function scriptedRun(){
   var cause=document.getElementById('cause'),steps=document.getElementById('steps'),th=document.getElementById('thinking'),bar=document.getElementById('confbar'),num=document.getElementById('confnum');
-  var c='Likely cause: a consumer group lost two instances after a deploy';
-  var st=['Check the health of the billing-sync consumer group.','Roll back release 3.14.2 if instances don\'t recover.','Notify the on-call owner for billing-sync.'];
+  var c='Likely cause: a handover setting changed on this sector the day the drops began';
+  var st=['Compare handover success with the neighboring sectors.','Roll back the handover offset change if drops don\'t recover within 24 hours.','Assign the ticket to RF optimization as priority 2.'];
   cause.textContent='';steps.innerHTML='';bar.style.width='0%';num.textContent='…';
-  var srcs=['Reading consumer lag…','Reading deploy log…','Reading broker health…'],i=0;
+  var srcs=['Reading KPI trend…','Reading change log…','Reading alarm history…'],i=0;
   (function think(){ if(i<srcs.length){th.textContent=srcs[i++];setTimeout(think,reduce?0:450);} else {th.textContent='Checked 3 sources';typeOut(cause,c,function(){var k=0;(function next(){if(k<st.length){var li=document.createElement('li');steps.appendChild(li);typeOut(li,st[k++],next);}else{bar.style.width='78%';num.textContent='78%';running=false;}})();});}})();
 }
 document.getElementById('run').addEventListener('click',function(){
@@ -1198,7 +1304,7 @@ document.getElementById('run').addEventListener('click',function(){
     if(!sample||!aiOK){runModeEl.textContent='Replay';return scriptedRun();}
     var cause=document.getElementById('cause'),steps=document.getElementById('steps'),th=document.getElementById('thinking'),bar=document.getElementById('confbar'),num=document.getElementById('confnum');
     th.textContent='Reading 3 sources…';cause.textContent='';steps.innerHTML='';bar.style.width='0%';num.textContent='…';
-    sample.json('You are an operations assistant inside a network-operations dashboard. Using ONLY the incident data below, find the most likely root cause and suggest next steps for the operator. Reply with only JSON: {"cause": "Likely cause: <one short sentence>", "steps": ["<short imperative step>", "<step>", "<step>"], "confidence": <integer 0-100>}.\n\n'+INCIDENT,{modelTier:'quick',cache:{gcTime:300000}})
+    sample.json('You are a triage assistant inside a network performance platform for RF engineers. Using ONLY the ticket data below, find the most likely root cause and suggest next steps for the engineer. Reply with only JSON: {"cause": "Likely cause: <one short sentence>", "steps": ["<short imperative step>", "<step>", "<step>"], "confidence": <integer 0-100>}.\n\n'+INCIDENT,{modelTier:'quick',cache:{gcTime:300000}})
       .then(function(r){
         var c=String(r&&r.cause||'Likely cause: unclear from the data'),st=Array.isArray(r&&r.steps)?r.steps.slice(0,4).map(String):[],cf=Math.max(0,Math.min(100,parseInt(r&&r.confidence,10)||0));
         th.textContent='Answered live by AI · checked 3 sources';
@@ -1210,30 +1316,34 @@ document.getElementById('run').addEventListener('click',function(){
 
 /* ---------- Ask about my work ---------- */
 var FACTS=[
-'Anusha Anumula is a full-stack developer with 5+ years of production experience, currently Full Stack Developer at Verizon via Incedo (June 2024–present), Dallas TX.',
-'Her line: "I operate at the intersection of engineering, customers, and product. Passionate, curious, and hands-on."',
-'Verizon network-operations portal: she talked directly with ops users to understand their workflows and pain points, designed directly in code (prototyping flows and layouts in React), demoed working builds and iterated on feedback. She built a shared component library on Material UI with React and TypeScript and one theme for color, spacing and type. Result: 25% less duplicated UI code, fewer clicks and screens for common tasks, fewer bugs and support tickets, positive user and client feedback, Best Deliverables recognition. After launch she reworked navigation and filters, simplified dense layouts and fixed slow views.',
-'Maps: she designed and built interactive map views with WebGL-rendered markers for thousands of network sites, GeoServer-backed GIS diff maps showing added and removed coverage between data loads, and Python scripts to ingest county boundary data.',
-'AI: she designed and built a GenAI prototype with the Google Gemini API that turned a reporting dashboard into a next-best-action and root-cause-analysis assistant, and presented the working prototype directly to client stakeholders. She built Gemini-powered code review prompts that flag code smells, vulnerabilities and standards issues. She uses AI daily (Claude, GitHub Copilot, Gemini) for exploring ideas, prototyping, boilerplate and review. Side projects: a RAG pipeline for natural-language questions across data sources, and a multi-source data retrieval agent.',
-'Data viz: reusable React components that draw Kafka topic flows in real time, and Grafana/Prometheus dashboards for lag, throughput and broker health; faster diagnosis improved system reliability 20%.',
+'This portfolio site follows its own design system: an 8-step type scale (12, 14, 16, 18, 20, 26, 32, 40 px), colors that each mean one thing (blue accent for actions, green healthy, amber warning, red down, and cyan, pink and violet for the engineering, customer and product views), a two-column grid that becomes one column under 720 px, 44 px touch targets on touch screens, visible keyboard focus, dark mode and reduced-motion support.',
+'Anusha Anumula is a full-stack AI engineer, currently Full Stack AI Engineer (official title: Technical Lead) at Incedo (June 2024–present), working for a national wireless carrier, based in Dallas TX.',
+'Her line: "I design and build interfaces that turn dense data into clear decisions."',
+'Network performance platform (national wireless carrier client): used by 1,000+ RF and performance engineers across 220+ U.S. markets, thousands of sites per market, 4G LTE and 5G NR, several equipment vendors; it processes 10M+ KPI records a day. Pain points: engineers jumped between KPI reports, outage lists, alarms and the ticket queue; similar screens had been rebuilt several ways; dense, slow views. She interviewed engineers and watched them work real tickets (ticket, site, KPI trend, outages or changes, action), prototyped the flow in React, demoed every sprint and iterated. She built a shared component library on Material UI with React and TypeScript and one theme. Results: 25% less duplicated UI code, fewer clicks from ticket to evidence, fewer bugs and support tickets, 20+ features delivered since 2024, Best Deliverables recognition.',
+'Map-based KPI analysis: engineers draw one or more polygons on a nationwide WebGL map to get KPI trends and site lists for an area, edit market boundaries, save geofences and cell groups, and see coverage diff layers (GeoServer) between data loads. Python and Airflow pipelines load GeoJSON, KML and county boundary data. This cut troubleshooting and reporting time by about 50% by replacing manual exports and spreadsheets.',
+'AI assistant for network triage: she designed and built a generative AI assistant on the Google Gemini API, prompt-engineered over a site\'s KPIs, alarms, outages and open tickets, that returns the likely cause, next steps, confidence and ticket priority. She captured senior engineers\' reasoning on real tickets, demoed it to client leadership and piloted it with engineers. She also built an agentic development workflow with Claude Code subagents and Playwright checks (about 2x delivery productivity) and Gemini code-review prompts that reduced defects. Side projects: a RAG pipeline (LangChain, embeddings, Chroma) and a LangGraph agent for natural-language questions across data sources; a Network Ops Copilot in progress.',
+'Live data views: reusable React components that draw Kafka topic flows in real time, plus Grafana/Prometheus dashboards for lag, throughput and broker health; faster diagnosis improved system reliability 20%.',
 'T-Mobile (Java Developer, July 2023–May 2024): designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility; user satisfaction rose 40%. Also Spring Boot microservices, Kafka, JWT security, SQL tuning (20% faster queries).',
-'TracFone (Software Developer, July 2019–2021): worked on retail shop flows for Straight Talk, TracFone and its other B2B and B2C brands; Spring/Java services, 30% faster SQL, 100+ unit tests, Jenkins/Docker CI/CD. University of North Texas: MS Computer Science, GPA 3.9, graduate teaching assistant.',
-'Skills: TypeScript, JavaScript, React, Redux, Material UI, theming, WebGL, interactive maps, HTML, CSS, Jest, Node.js, Express, Java, Spring Boot, Python, Kafka, SQL, AWS, Docker, Git, pull requests and code review, CI/CD.',
-'TracFone shop flows: she worked on shop flows for Straight Talk, TracFone and their other B2B and B2C brands.',
-'Approach: she has a bias toward simplicity in design and code: fewer screens, one pattern everywhere, less code. On the Verizon portal she removed duplicate screens and patterns instead of adding new ones, cutting duplicated UI code by 25%.',
+'TracFone (Associate Engineer to Software Engineer, 2019–2021): shop and order flows for several prepaid wireless brands, B2B and B2C, on IBM WebSphere Commerce across order, payment, member and catalog systems; owned resolution of stuck orders; Spring services; 30% faster DB2 queries; 100+ unit tests; Jenkins/Docker CI/CD. University of North Texas: MS Computer Science, GPA 3.9, graduate research and teaching assistant.',
+'Skills: TypeScript, JavaScript, React, Redux, Material UI, WebGL, interactive maps, Node.js, Express, Python, FastAPI, Java, Spring Boot, Kafka, Airflow, SQL, SingleStore, PostgreSQL, AWS, Docker, Kubernetes, Git and code review, CI/CD, LLM APIs (Gemini, Claude, OpenAI), LangChain, LangGraph, RAG, MCP, Claude Code, GitHub Copilot.',
+'Approach: a bias toward simplicity in design and code: fewer screens, one pattern everywhere, less code. On the network performance platform she removed duplicate screens and patterns instead of adding new ones, cutting duplicated UI code by 25%.',
+'Venue display concept (self-initiated, 2026): a screen designed to be read at a distance (a 10-foot UI) for venues such as gyms, cafés and waiting rooms, and the owner web app that manages every screen. Built in Vue 3, TypeScript and Vite. TV: 1920x1080 stage, nothing smaller than 26px, remote D-pad focus navigation with focus memory, 5% safe areas, captions on by default, quiet watch mode with a browse overlay that closes itself. Owner app: alerts first (offline, update ready) with one-click fixes, screen list with status in words, channel and daypart schedule, captions toggle; the TV and app share one store. Live demo on her portfolio.',
 'Contact: anumula.anusha@outlook.com. Based in Dallas, Texas.'
 ].join('\n');
 var FAQ=[
- {k:['system','component','library','mui','material','theme','tokens'],a:'Yes. On the Verizon portal she built a shared component library on Material UI with React and TypeScript, with one theme for color, spacing and type. That cut duplicated UI code by 25% and made every page behave the same way.',s:[['Design system','#system']]},
- {k:['design','designed','ux','ui','screens','flows','figma'],a:'On the Verizon network-operations portal she owned the UI design, not just the build. She talked directly with ops users about their workflows and pain points, designed the flows and layouts directly in code by prototyping in React, demoed working builds, and changed the design based on their feedback. Her design decisions: status first, summary before detail, fewer steps, and one navigation pattern everywhere.',s:[['Ops portal','#ops-portal']]},
- {k:['ai','llm','gemini','copilot','claude','prompt','genai','agent','rag'],a:'Every day. She designed and built a GenAI prototype with the Gemini API that turned a reporting dashboard into an assistant that suggests the likely cause and next steps, and demoed it directly to client stakeholders. She also built Gemini-powered code review prompts, and uses Claude, GitHub Copilot and Gemini daily to explore ideas, prototype, write boilerplate and review code.',s:[['AI assistant','#ai-assistant'],['AI rules','#ai-ux']]},
- {k:['shop','retail','tracfone','straight talk','ecommerce','checkout','brand'],a:'At TracFone she worked on shop flows for Straight Talk, TracFone and their other B2B and B2C brands, plus the Java and Spring services behind them. She improved database efficiency by 30%.',s:[['Shop flows','#shop']]},
- {k:['t-mobile','tmobile','subscription','dashboard','accessib','responsive'],a:'At T-Mobile she designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility. User satisfaction rose 40%.',s:[['Subscription dashboard','#subscriptions']]},
- {k:['result','impact','metric','strongest','number','best'],a:'25% less duplicated UI code after the portal rebuild, 40% higher user satisfaction on a T-Mobile dashboard, and 20% better reliability from faster diagnosis. She also earned Best Deliverables recognition at Verizon.',s:[['Results','#top']]},
- {k:['map','maps','webgl','gis','geo','marker'],a:'She built interactive map views with WebGL-rendered markers for thousands of network sites, and GIS diff maps that show added and removed coverage between data loads. You can try a rebuilt version on this page.',s:[['Maps demo','#maps']]},
- {k:['vue','react','typescript','stack','code','engineer','pull','git'],a:'She ships production React and TypeScript, and has 5+ years in real codebases with Git, pull requests and code review. Behind the UI she also works in Node.js, Java/Spring Boot and Python.',s:[['Ops portal','#ops-portal']]},
- {k:['user','users','customer','feedback','talk','research'],a:'She talked directly with ops users to understand their workflows, demoed builds to them, and iterated on feedback after launch: reworking navigation and filters, simplifying dense layouts, and fixing slow screens.',s:[['After launch','#ops-portal']]},
- {k:['simple','simplicity','minimal','approach','philosophy','principle','clean'],a:'She keeps design and code simple: fewer screens, one pattern everywhere, less code. On the Verizon portal she removed duplicate screens and patterns instead of adding new ones, which cut duplicated UI code by 25% and made every page work the same way.',s:[['Ops portal','#ops-portal']]},
+ {k:['typograph','type scale','font','color','colour','grid','layout','spacing','design system','hierarchy','token'],a:'The site follows its own system: an 8-step type scale, colors that each mean one thing (the blue accent is only for actions, amber only for warnings), a two-column grid, and 44px touch targets on phones. At work she applies the same ideas: status colors only for state, summary before detail, one shared component library and theme.',s:[['How this site is designed','#design'],['Platform redesign','#ops-portal']]},
+ {k:['system','component','library','mui','material','theme','tokens'],a:'Yes. On the network performance platform she built a shared component library on Material UI with React and TypeScript, with one theme for color, spacing and type. That cut duplicated UI code by 25% and made every page behave the same way.',s:[['Design system','#ops-portal']]},
+ {k:['design','designed','ux','ui','screens','flows','figma','research'],a:'She owns the design, not just the build. On the network performance platform she interviewed RF engineers and watched them work real tickets, found the path most investigations follow, prototyped that flow in React, demoed builds every sprint and iterated. Her design decisions: status first, summary before detail, fewer steps, one pattern everywhere.',s:[['Platform redesign','#ops-portal']]},
+ {k:['ai','llm','gemini','copilot','claude','prompt','genai','agent','rag','langgraph'],a:'She built and piloted a generative AI assistant on the Gemini API that reads a site\'s KPIs, alarms and open tickets and suggests the likely cause, next steps and ticket priority. She also ships with Claude Code subagents and Playwright checks (about 2x delivery) and built AI code-review prompts. Side projects use RAG and LangGraph agents.',s:[['AI assistant','#ai-assistant']]},
+ {k:['map','maps','webgl','gis','geo','marker','polygon'],a:'She built map-based KPI analysis: engineers draw areas on a nationwide WebGL map to get KPI trends and site lists, save geofences and cell groups, and see coverage changes between data loads. It cut troubleshooting and reporting time by about 50%.',s:[['Maps','#maps']]},
+ {k:['shop','retail','tracfone','ecommerce','checkout','brand','order'],a:'At TracFone she worked on shop and order flows for several prepaid wireless brands, B2B and B2C, on WebSphere Commerce, and owned resolution of stuck orders. She also improved database efficiency by 30%.',s:[['Experience','#about']]},
+ {k:['t-mobile','tmobile','subscription','dashboard','accessib','responsive'],a:'At T-Mobile she designed and built front-end components for a subscription-management dashboard in React and Redux, focused on responsiveness and accessibility. User satisfaction rose 40%.',s:[['Experience','#about']]},
+ {k:['result','impact','metric','strongest','number','best'],a:'About 50% less troubleshooting and reporting time from the map tools, 25% less duplicated UI code after the platform redesign, 40% higher user satisfaction at T-Mobile, and 20% better reliability from faster diagnosis. She also earned Best Deliverables recognition.',s:[['Work','#work']]},
+ {k:['telecom','network','rf','kpi','5g','lte','ran'],a:'Her current platform serves RF and performance engineers across 220+ U.S. markets, with KPIs at sector-carrier level for 4G LTE and 5G NR from several equipment vendors, plus outages, alarms and network planning data.',s:[['Platform redesign','#ops-portal']]},
+ {k:['vue','react','typescript','stack','code','engineer','pull','git','python'],a:'She ships production React and TypeScript, working in real codebases with Git, pull requests and code review. Behind the UI she works in Node.js, Python and Java/Spring Boot. Her venue display concept is built in Vue 3 and TypeScript.',s:[['Platform redesign','#ops-portal'],['Venue display concept','#tv-concept']]},
+ {k:['user','users','customer','feedback','talk'],a:'She talks directly with the people who use her work: interviews, watching real tickets, demos every sprint, and changes after launch such as reworked navigation and filters, simpler dense layouts and faster screens.',s:[['After launch','#ops-portal']]},
+ {k:['simple','simplicity','minimal','approach','philosophy','principle','clean'],a:'She keeps design and code simple: fewer screens, one pattern everywhere, less code. On the network performance platform she removed duplicate screens and patterns instead of adding new ones, cutting duplicated UI code by 25%.',s:[['Platform redesign','#ops-portal']]},
+ {k:['tv','10-foot','10 ft','ten-foot','remote','venue','television','screen'],a:'Her venue display concept is a screen designed to be read at a distance, for gyms, cafés and waiting rooms, plus the owner web app that manages every screen. It is built in Vue 3 and TypeScript, with remote-friendly focus navigation, large type, safe areas, captions on by default and an alerts-first owner app. There is a live demo on the page.',s:[['Venue display concept','#tv-concept']]},
  {k:['contact','email','hire','reach'],a:'Email anumula.anusha@outlook.com. She is based in Dallas, Texas.',s:[['Contact','#contact']]}
 ];
 function localAnswer(q){var w=q.toLowerCase(),best=null,bs=0;FAQ.forEach(function(f){var sc=0;f.k.forEach(function(k){if(w.indexOf(k)>=0)sc++;});if(sc>bs){bs=sc;best=f;}});
@@ -1432,7 +1542,7 @@ function loop(t){if(visibleOnScreen){draw(t);}requestAnimationFrame(loop);}
 if(reduce){draw(0);}else requestAnimationFrame(loop);
 /* ---------- simple router ---------- */
 (function(){
-  var views=['ops-portal','maps','ai-assistant','subscriptions','shop'];
+  var views=['ops-portal','maps','ai-assistant','tv-concept'];
   function route(){
     var t=(location.hash||'#home').slice(1)||'home',isCase=views.indexOf(t)>=0;
     document.querySelectorAll('.view').forEach(function(v){v.hidden=isCase?v.id!=='v-'+t:v.id!=='v-home';});
@@ -1464,23 +1574,12 @@ if(reduce){draw(0);}else requestAnimationFrame(loop);
 var LINKS={linkedin:'https://www.linkedin.com/in/anusha15/',github:''};
 document.querySelectorAll('[data-link]').forEach(function(li){var u=LINKS[li.dataset.link];if(u){li.querySelector('a').href=u;li.hidden=false;}});
 
-/* ---------- reading lens ---------- */
-(function(){
-  var btns=[].slice.call(document.querySelectorAll('[data-lens]')),tl=document.getElementById('tldr');
-  function set(l){btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lens===l)});
-    document.body.classList.remove('lens-recruiter','lens-designer','lens-engineer');if(l!=='all')document.body.classList.add('lens-'+l);
-    tl.hidden=l!=='recruiter';
-    document.querySelectorAll('.wcard .sub').forEach(function(e){e.textContent=e.dataset[l==='designer'?'designer':l==='engineer'?'engineer':'all'];});
-    try{localStorage.setItem('lens',l)}catch(e){}}
-  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.lens)})});
-  try{var v=localStorage.getItem('lens');if(v)set(v);}catch(e){}
-})();
 /* ---------- contact dock ---------- */
 (function(){
   var dock=document.getElementById('dock'),hero=document.querySelector('.hero'),contact=document.getElementById('contact');
   function upd(){var y=window.scrollY,show=hero&&y>hero.offsetHeight&&!document.getElementById('v-home').hidden;
     if(show&&contact){var r=contact.getBoundingClientRect();if(r.top<window.innerHeight)show=false;}
-    if(document.getElementById('v-home').hidden)show=y>200;dock.classList.toggle('show',!!show);}
+    if(document.getElementById('v-home').hidden)show=y>200;dock.classList.toggle('show',!!show);var W=window.innerWidth,H=window.innerHeight,d={right:W-16,left:W-16-dock.offsetWidth,bottom:H-16,top:H-16-dock.offsetHeight},hit=false;if(show){document.querySelectorAll('.view:not([hidden]) :is(figure,.demo,.cs-embed,.prose,.facts,.wcard,.ask,.exp li,.skillgroups,.dn,.links,h2,p,li)').forEach(function(el){var r=el.getBoundingClientRect();if(r.left<d.right&&r.right>d.left&&r.top<d.bottom&&r.bottom>d.top)hit=true;});}dock.classList.toggle('over',hit);}
   window.addEventListener('scroll',function(){upd();var pv=document.getElementById('preview');if(pv)pv.classList.remove('show');},{passive:true});window.addEventListener('hashchange',function(){setTimeout(upd,50)});upd();
   document.getElementById('dockmail').addEventListener('click',function(){var b=this;try{navigator.clipboard.writeText('anumula.anusha@outlook.com').then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1600)},function(){b.textContent='anumula.anusha@outlook.com'});}catch(e){b.textContent='anumula.anusha@outlook.com';}});
 })();
